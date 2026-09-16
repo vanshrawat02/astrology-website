@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | Cosmic Guidance</title>
+    <meta name="description" content="Find answers to all common questions about Kundali matching, Zero-Demolition Vastu, online video call consultations, and certified gemstone energization.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#F59E0B',
+                            500: '#D97706',
+                            600: '#B45309',
+                            700: '#78350F'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #0F172A;
+        }
+
+        .bg-light-pattern {
+            background-color: #FAF8F5;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(217, 119, 6, 0.06), transparent 50%),
+                radial-gradient(circle at 100% 50%, rgba(245, 158, 11, 0.04), transparent 40%);
+        }
+
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(217, 119, 6, 0.2);
+            box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #B45309 0%, #D97706 50%, #F59E0B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-gold-shimmer {
+            background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(217, 119, 6, 0.25);
+        }
+        .btn-gold-shimmer:hover {
+            box-shadow: 0 8px 30px rgba(217, 119, 6, 0.4);
+            transform: translateY(-2px);
+        }
+
+        details[open] summary .chevron-icon {
+            transform: rotate(180deg);
+        }
+
+        @keyframes pulseRing {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+            70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+        .pulse-whatsapp {
+            animation: pulseRing 2s infinite;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-white text-slate-900">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-amber-500/20 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-gold-600 to-amber-400 flex items-center justify-center text-white shadow-md group-hover:rotate-45 transition-transform duration-500">
+                    <i class="fa-solid fa-dharmachakra text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-heading font-bold text-xl sm:text-2xl gold-gradient-text tracking-wide block">Cosmic Guidance</span>
+                    <span class="text-[10px] text-amber-700 tracking-widest uppercase block -mt-1">Vedic Astrology & Vastu</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
+                <a href="index.html" class="hover:text-gold-500 transition-colors">Home</a>
+                <a href="services.html" class="hover:text-gold-500 transition-colors">Services</a>
+                <a href="why-us.html" class="hover:text-gold-500 transition-colors">Why Choose Us</a>
+                <a href="faq.html" class="text-gold-500 border-b-2 border-gold-500 pb-1">FAQ</a>
+                <a href="contact.html" class="hover:text-gold-500 transition-colors">Contact Us</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="https://wa.me/919999999999?text=Hi%20Cosmic%20Guidance,%20I%20would%20like%20to%20book%20an%20Astrology/Vastu%20consultation." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm px-5 py-2.5 rounded-full flex items-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Book on WhatsApp</span>
+                </a>
+            </div>
+
+            <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="md:hidden text-amber-600 text-2xl focus:outline-none p-2">
+                <i class="fa-solid fa-bars-staggered" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-amber-500/20 px-4 pt-4 pb-6 space-y-3 shadow-lg">
+            <a href="index.html" class="block text-slate-700 hover:text-gold-500 font-medium py-1">Home</a>
+            <a href="services.html" class="block text-slate-700 hover:text-gold-500 font-medium py-1">Services</a>
+            <a href="why-us.html" class="block text-slate-700 hover:text-gold-500 font-medium py-1">Why Choose Us</a>
+            <a href="faq.html" class="block text-gold-600 font-bold py-1">FAQ</a>
+            <a href="contact.html" class="block text-slate-700 hover:text-gold-500 font-medium py-1">Contact Us</a>
+            <a href="https://wa.me/919999999999?text=Hi%20Cosmic%20Guidance,%20I%20would%20like%20to%20book%20an%20Astrology/Vastu%20consultation." target="_blank" rel="noopener noreferrer" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-center py-3 rounded-xl flex items-center justify-center gap-2 mt-2 shadow-md">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Book on WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+
+    <!-- PAGE BANNER -->
+    <section class="bg-light-pattern py-16 border-b border-amber-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xs font-bold uppercase tracking-widest text-amber-600 block mb-2">Help & Clarity</span>
+            <h1 class="font-heading text-4xl sm:text-5xl font-extrabold text-slate-900 mb-4">
+                Frequently Asked <span class="gold-gradient-text">Questions</span>
+            </h1>
+            <p class="text-slate-600 text-base max-w-2xl mx-auto">
+                Everything you need to know about our Vedic Astrology & Vastu Shastra consultation process.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- FAQ ACCORDION -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-4">
+                
+                <!-- Q1 -->
+                <details class="glass-card-light rounded-2xl overflow-hidden group" open>
+                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none text-slate-900 font-bold text-base sm:text-lg group-hover:text-amber-600 transition-colors">
+                        <span>What details are needed for an accurate Kundali consultation?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-600 transition-transform duration-300 chevron-icon ml-4"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60 pt-4">
+                        To prepare your exact birth chart (Janma Kundali), we require your <strong>Date of Birth, Exact Time of Birth (AM/PM), and Place of Birth (City/Town)</strong>. If you do not know your exact time of birth, you can opt for our <em>Prashna Kundali (Horary Astrology)</em> service to receive precise answers to your specific life questions.
+                    </div>
+                </details>
+
+                <!-- Q2 -->
+                <details class="glass-card-light rounded-2xl overflow-hidden group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none text-slate-900 font-bold text-base sm:text-lg group-hover:text-amber-600 transition-colors">
+                        <span>Do your Vastu Shastra remedies require expensive structural demolition?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-600 transition-transform duration-300 chevron-icon ml-4"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60 pt-4">
+                        <strong>No, absolutely not!</strong> We specialize exclusively in 100% Zero-Demolition Vastu Shastra. We correct directional defects, elemental blockages, and energy drains using natural brass/copper pyramids, elemental color therapy, energized yantras, and strategic internal layout adjustments without breaking a single wall.
+                    </div>
+                </details>
+
+                <!-- Q3 -->
+                <details class="glass-card-light rounded-2xl overflow-hidden group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none text-slate-900 font-bold text-base sm:text-lg group-hover:text-amber-600 transition-colors">
+                        <span>How does an online Audio/Video consultation take place?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-600 transition-transform duration-300 chevron-icon ml-4"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60 pt-4">
+                        Once you choose a service and book via WhatsApp or Call, our coordinator schedules a convenient 1-on-1 slot on <strong>WhatsApp Video/Audio Call or Google Meet</strong>. Post-consultation, you also receive a detailed written PDF report containing your chart readings and step-by-step remedies.
+                    </div>
+                </details>
+
+                <!-- Q4 -->
+                <details class="glass-card-light rounded-2xl overflow-hidden group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none text-slate-900 font-bold text-base sm:text-lg group-hover:text-amber-600 transition-colors">
+                        <span>Are recommended gemstones certified and pre-energized?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-600 transition-transform duration-300 chevron-icon ml-4"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60 pt-4">
+                        Yes, every gemstone recommended by Cosmic Guidance is <strong>100% lab-certified, unheated, and natural</strong>. Additionally, each stone undergoes traditional Vedic <em>Abhimantrit</em> energization rituals with mantras customized to your Rashi and Nakshatra prior to wearing.
+                    </div>
+                </details>
+
+                <!-- Q5 -->
+                <details class="glass-card-light rounded-2xl overflow-hidden group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none text-slate-900 font-bold text-base sm:text-lg group-hover:text-amber-600 transition-colors">
+                        <span>What is the turnaround time for reports and appointments?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-600 transition-transform duration-300 chevron-icon ml-4"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60 pt-4">
+                        Standard consultation slots and PDF reports are delivered within <strong>24 to 48 hours</strong> of booking. Express slots for urgent Prashna Kundali questions are available within 6 to 12 hours.
+                    </div>
+                </details>
+
+                <!-- Q6 -->
+                <details class="glass-card-light rounded-2xl overflow-hidden group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none text-slate-900 font-bold text-base sm:text-lg group-hover:text-amber-600 transition-colors">
+                        <span>Are consultations confidential?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-600 transition-transform duration-300 chevron-icon ml-4"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60 pt-4">
+                        Yes, 100%. All personal details, birth charts, audio calls, and reports are strictly private between you and Acharya Rajesh Sharma.
+                    </div>
+                </details>
+
+            </div>
+
+            <!-- Still Have Questions Callout -->
+            <div class="mt-16 bg-amber-500/10 rounded-3xl p-8 border border-amber-500/20 text-center">
+                <h3 class="font-heading text-xl font-bold text-slate-900 mb-2">Still Have Questions?</h3>
+                <p class="text-slate-600 text-sm mb-6 max-w-lg mx-auto">
+                    Speak directly with our consultation coordinator on WhatsApp to resolve any doubts or choose the right service.
+                </p>
+                <a href="https://wa.me/919999999999?text=Hi%20Cosmic%20Guidance,%20I%20have%20a%20question%20before%20booking%20my%20consultation." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-full text-sm shadow-md transition-all">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-24 lg:pb-12 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-dharmachakra"></i>
+                        </div>
+                        <span class="font-heading font-bold text-xl text-white">Cosmic Guidance</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Empowering lives with authentic Vedic Astrology insights and Zero-Demolition Vastu Shastra consultation.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-white text-base mb-4">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="index.html" class="hover:text-gold-400">Home</a></li>
+                        <li><a href="services.html" class="hover:text-gold-400">Services</a></li>
+                        <li><a href="why-us.html" class="hover:text-gold-400">Why Choose Us</a></li>
+                        <li><a href="faq.html" class="hover:text-gold-400">FAQ</a></li>
+                        <li><a href="contact.html" class="hover:text-gold-400">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-white text-base mb-4">Key Offerings</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="services.html" class="hover:text-gold-400">Kundali & Guna Milan</a></li>
+                        <li><a href="services.html" class="hover:text-gold-400">Career & Wealth Analysis</a></li>
+                        <li><a href="services.html" class="hover:text-gold-400">Zero-Demolition Vastu</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-white text-base mb-4">Get in Touch</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-phone text-amber-400"></i><span>+91 99999 99999</span></li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-envelope text-amber-400"></i><span>info@cosmicguidance.com</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-location-dot text-amber-400 mt-0.5"></i><span>Vedic Chambers, Sector 18, New Delhi, India</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+                <p>© 2026 Cosmic Guidance. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/919999999999?text=Hi%20Cosmic%20Guidance,%20I%20want%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-5 py-3.5 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 pulse-whatsapp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="hidden sm:inline text-sm font-semibold">Chat with Expert</span>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars-staggered');
+                } else {
+                    menuIcon.classList.remove('fa-bars-staggered');
+                    menuIcon.classList.add('fa-xmark');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
