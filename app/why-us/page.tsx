@@ -135,35 +135,47 @@ export default function WhyUsPage() {
           <Card className="glass-card-light p-8 sm:p-12 border-amber-500/30">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-8 space-y-6">
-                <Badge variant="default">Certified Experts</Badge>
+                <Badge variant="default">Certified Astrological Authority</Badge>
                 <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900">
-                  Vedic Astrology & Bhrigu Nandi Nadi Consultation
+                  Meet Your Astrologer & Guide
                 </h2>
                 <p className="text-slate-600 leading-relaxed text-base">
-                  With years of dedicated practice in Vedic Kundali evaluation and Bhrigu Nandi Nadi techniques, our experts guide individuals towards personal, professional, and domestic harmony.
+                  Welcome. I am a certified expert in traditional Vedic Astrology and Bhrigu Nandi Nadi techniques, dedicated to offering authentic, research-backed insights to help you navigate life&apos;s pivotal decisions.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 text-xs font-semibold text-slate-800">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                    <span>Certified Vedic Astrologers</span>
+                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-amber-50/60 border border-amber-500/20">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-bold block text-slate-900">Jyotish Alankar & Jyotish Acharya</span>
+                      <span className="text-[11px] text-slate-600 font-normal">Bharatiya Vidya Bhavan, New Delhi</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                    <span>Bhrigu Nandi Nadi Specialists</span>
+                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-amber-50/60 border border-amber-500/20">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-bold block text-slate-900">Bhrigu Nandi Nadi Specialist</span>
+                      <span className="text-[11px] text-slate-600 font-normal">Under Dr. Maheshanand Joshi</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                    <span>Marriage & Relationship Guidance</span>
+                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-amber-50/60 border border-amber-500/20">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-bold block text-slate-900">Diploma in Vedic Astrology</span>
+                      <span className="text-[11px] text-slate-600 font-normal">Shree Maharshi College, Udaipur</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                    <span>100% Private 1-on-1 Sessions</span>
+                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-amber-50/60 border border-amber-500/20">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-bold block text-slate-900">Advanced Research Certifications</span>
+                      <span className="text-[11px] text-slate-600 font-normal">Post-doctoral classical planetary research</span>
+                    </div>
                   </div>
                 </div>
-                <div className="pt-4 flex flex-wrap gap-4">
+                <div className="pt-4 flex flex-wrap gap-4 items-center">
                   <Button size="lg" className="btn-gold-shimmer" asChild>
-                    <Link href="/contact" className="flex items-center gap-2">
-                      <span>Book Consultation</span>
+                    <Link href="/#booking-system" className="flex items-center gap-2">
+                      <span>Book Session — ₹1,500 INR</span>
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </Button>
@@ -182,10 +194,13 @@ export default function WhyUsPage() {
                     VAN
                   </div>
                 </div>
-                <h4 className="font-bold text-slate-900 text-lg mt-6">Certified Experts</h4>
+                <h4 className="font-bold text-slate-900 text-lg mt-6">Certified Expert</h4>
                 <p className="text-xs text-amber-700 font-semibold uppercase tracking-wider mt-1">
-                  Vedic & Bhrigu Nandi Nadi Astrologers
+                  Vedic & Bhrigu Nandi Nadi Astrologer
                 </p>
+                <div className="mt-3 inline-block px-3 py-1 rounded-full bg-amber-100 border border-amber-400/40 text-xs font-bold text-amber-900">
+                  Fixed Fee: ₹1,500 INR
+                </div>
               </div>
             </div>
           </Card>
