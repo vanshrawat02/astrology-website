@@ -4,67 +4,93 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --background: 240 33% 8%;
+    --foreground: 210 40% 98%;
+    --card: 240 28% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 240 28% 12%;
+    --popover-foreground: 210 40% 98%;
     --primary: 38 92% 50%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 38 92% 95%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground: 240 33% 8%;
+    --secondary: 265 45% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 240 20% 16%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 240 33% 8%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 38 70% 85%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 38 70% 35%;
+    --input: 240 20% 20%;
     --ring: 38 92% 50%;
-    --radius: 0.75rem;
+    --radius: 0.85rem;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-amber-500/20;
   }
   body {
-    @apply bg-white text-slate-900 font-sans antialiased selection:bg-gold-500 selection:text-white;
+    @apply bg-[#0A0D24] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950;
   }
 }
 
-.bg-light-pattern {
-  background-color: #FAF8F5;
+/* Mystical Cosmic Theme Backgrounds & Overlays */
+.bg-cosmic-dark {
+  background-color: #0A0D24;
   background-image: 
-    radial-gradient(circle at 50% 0%, rgba(217, 119, 6, 0.06), transparent 50%),
-    radial-gradient(circle at 100% 50%, rgba(245, 158, 11, 0.04), transparent 40%),
-    radial-gradient(circle at 0% 80%, rgba(217, 119, 6, 0.04), transparent 40%);
+    radial-gradient(circle at 50% 0%, rgba(120, 53, 15, 0.25), transparent 60%),
+    radial-gradient(circle at 100% 40%, rgba(88, 28, 135, 0.3), transparent 50%),
+    radial-gradient(circle at 0% 70%, rgba(30, 27, 75, 0.4), transparent 50%);
 }
 
-.glass-card-light {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(217, 119, 6, 0.2);
-  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05);
+.bg-purple-cosmic {
+  background: linear-gradient(135deg, #0F0C29 0%, #24243E 50%, #302B63 100%);
 }
 
+/* Glassmorphism Cards with Glowing Golden Borders */
+.glass-card-cosmic {
+  background: rgba(18, 16, 46, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(245, 158, 11, 0.08);
+}
+
+.glass-card-cosmic:hover {
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.6), 0 0 25px rgba(245, 158, 11, 0.2);
+}
+
+/* Gold Gradient Typography */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #B45309 0%, #D97706 50%, #F59E0B 100%);
+  background: linear-gradient(135deg, #FDE047 0%, #F59E0B 50%, #D97706 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.gold-gradient-text-bright {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FDE047 40%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shimmer Buttons */
 .btn-gold-shimmer {
-  background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(217, 119, 6, 0.25);
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+  color: #0F172A;
+  font-weight: 700;
 }
 
 .btn-gold-shimmer:hover {
-  box-shadow: 0 8px 30px rgba(217, 119, 6, 0.4);
+  box-shadow: 0 6px 28px rgba(245, 158, 11, 0.5);
   transform: translateY(-2px);
 }
 
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
