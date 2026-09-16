@@ -231,10 +231,61 @@
 
 
     <!-- FEATURED SERVICES TEASER -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-20 bg-white relative overflow-hidden" id="featured-services-section">
+        
+        <!-- Animated Indian Rangoli Background Motif Left Top -->
+        <div class="absolute -top-16 -left-16 sm:-top-24 sm:-left-24 z-0 pointer-events-none transition-all duration-1000 opacity-20 sm:opacity-30 scale-90" id="rangoliMotifLeft">
+            <svg class="w-64 h-64 sm:w-96 sm:h-96 text-amber-600 animate-[spin_60s_linear_infinite]" viewBox="0 0 200 200" fill="none" stroke="currentColor">
+                <!-- Outer Rangoli Concentric Geometry -->
+                <circle cx="100" cy="100" r="92" stroke-width="1" stroke-dasharray="3 3" />
+                <circle cx="100" cy="100" r="80" stroke-width="1.5" />
+                <circle cx="100" cy="100" r="60" stroke-width="1" />
+                <circle cx="100" cy="100" r="30" stroke-width="1.5" />
+                <circle cx="100" cy="100" r="10" fill="rgba(217, 119, 6, 0.15)" />
+                <!-- 8 Sacred Lotus Petals -->
+                <path d="M100 10 C115 35 115 65 100 80 C85 65 85 35 100 10 Z" stroke-width="1.2" fill="rgba(245, 158, 11, 0.05)" />
+                <path d="M100 190 C115 165 115 135 100 120 C85 135 85 165 100 190 Z" stroke-width="1.2" fill="rgba(245, 158, 11, 0.05)" />
+                <path d="M10 100 C35 115 65 115 80 100 C65 85 35 85 10 100 Z" stroke-width="1.2" fill="rgba(245, 158, 11, 0.05)" />
+                <path d="M190 100 C165 115 135 115 120 100 C135 85 165 85 190 100 Z" stroke-width="1.2" fill="rgba(245, 158, 11, 0.05)" />
+                <g transform="rotate(45 100 100)">
+                    <path d="M100 10 C115 35 115 65 100 80 C85 65 85 35 100 10 Z" stroke-width="1.2" fill="rgba(245, 158, 11, 0.05)" />
+                    <path d="M100 190 C115 165 115 135 100 120 C85 135 85 165 100 190 Z" stroke-width="1.2" fill="rgba(245, 158, 11, 0.05)" />
+                    <path d="M10 100 C35 115 65 115 80 100 C65 85 35 85 10 100 Z" stroke-width="1.2" fill="rgba(245, 158, 11, 0.05)" />
+                    <path d="M190 100 C165 115 135 115 120 100 C135 85 165 85 190 100 Z" stroke-width="1.2" fill="rgba(245, 158, 11, 0.05)" />
+                </g>
+                <!-- Interlocking Yantra Triangles -->
+                <polygon points="100,20 169,140 31,140" stroke-width="1" opacity="0.6"/>
+                <polygon points="100,180 169,60 31,60" stroke-width="1" opacity="0.6"/>
+            </svg>
+        </div>
+
+        <!-- Animated Indian Rangoli Background Motif Right Bottom -->
+        <div class="absolute -bottom-20 -right-20 sm:-bottom-28 sm:-right-28 z-0 pointer-events-none transition-all duration-1000 opacity-20 sm:opacity-30 scale-90" id="rangoliMotifRight">
+            <svg class="w-72 h-72 sm:w-[420px] sm:h-[420px] text-amber-600 animate-[spin_50s_linear_infinite_reverse]" viewBox="0 0 200 200" fill="none" stroke="currentColor">
+                <circle cx="100" cy="100" r="95" stroke-width="1" stroke-dasharray="4 4" />
+                <circle cx="100" cy="100" r="82" stroke-width="1.2" />
+                <circle cx="100" cy="100" r="55" stroke-width="1" />
+                <circle cx="100" cy="100" r="28" stroke-width="1.5" />
+                <!-- 12 Radiating Rays / Petals -->
+                <g transform="rotate(0 100 100)"><path d="M100 15 L100 45" stroke-width="2" stroke-linecap="round"/></g>
+                <g transform="rotate(30 100 100)"><path d="M100 15 L100 45" stroke-width="2" stroke-linecap="round"/></g>
+                <g transform="rotate(60 100 100)"><path d="M100 15 L100 45" stroke-width="2" stroke-linecap="round"/></g>
+                <g transform="rotate(90 100 100)"><path d="M100 15 L100 45" stroke-width="2" stroke-linecap="round"/></g>
+                <g transform="rotate(120 100 100)"><path d="M100 15 L100 45" stroke-width="2" stroke-linecap="round"/></g>
+                <g transform="rotate(150 100 100)"><path d="M100 15 L100 45" stroke-width="2" stroke-linecap="round"/></g>
+                <g transform="rotate(180 100 100)"><path d="M100 15 L100 45" stroke-width="2" stroke-linecap="round"/></g>
+                <g transform="rotate(210 100 100)"><path d="M100 15 L100 45" stroke-width="2" stroke-linecap="round"/></g>
+                <g transform="rotate(240 100 100)"><path d="M100 15 L100 45" stroke-width="2" stroke-linecap="round"/></g>
+                <g transform="rotate(270 100 100)"><path d="M100 15 L100 45" stroke-width="2" stroke-linecap="round"/></g>
+                <g transform="rotate(300 100 100)"><path d="M100 15 L100 45" stroke-width="2" stroke-linecap="round"/></g>
+                <g transform="rotate(330 100 100)"><path d="M100 15 L100 45" stroke-width="2" stroke-linecap="round"/></g>
+                <circle cx="100" cy="100" r="12" fill="rgba(217, 119, 6, 0.1)" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-amber-600 block mb-2">Sacred Offerings</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-600 block mb-2">✦ Sacred Offerings ✦</span>
                 <h2 class="font-heading text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
                     Our Core <span class="gold-gradient-text">Consultation Services</span>
                 </h2>
@@ -246,8 +297,18 @@
             <!-- Grid of 3 Featured Cards -->
             <div class="grid md:grid-cols-3 gap-8 mb-12">
                 <!-- Card 1 -->
-                <div class="glass-card-light rounded-3xl p-8 flex flex-col justify-between hover:border-amber-500 transition-all duration-300 group">
-                    <div>
+                <div class="glass-card-light rounded-3xl p-8 flex flex-col justify-between hover:border-amber-500 transition-all duration-300 group relative overflow-hidden">
+                    <!-- Subtle Card Rangoli Watermark -->
+                    <svg class="w-32 h-32 text-amber-500/10 absolute -top-8 -right-8 pointer-events-none group-hover:rotate-45 group-hover:scale-110 transition-transform duration-700" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                        <circle cx="50" cy="50" r="45" stroke-width="0.8" stroke-dasharray="2 2" />
+                        <circle cx="50" cy="50" r="30" stroke-width="1" />
+                        <path d="M50 5 C60 20 60 35 50 45 C40 35 40 20 50 5 Z" stroke-width="0.8"/>
+                        <path d="M50 95 C60 80 60 65 50 55 C40 65 40 80 50 95 Z" stroke-width="0.8"/>
+                        <path d="M5 50 C20 60 35 60 45 50 C35 40 20 40 5 50 Z" stroke-width="0.8"/>
+                        <path d="M95 50 C80 60 65 60 55 50 C65 40 80 40 95 50 Z" stroke-width="0.8"/>
+                    </svg>
+
+                    <div class="relative z-10">
                         <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-600 text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all">
                             <i class="fa-solid fa-heart-pulse"></i>
                         </div>
@@ -258,7 +319,7 @@
                             Detailed Ashtakoot Milan (36 Gunas), Manglik Dosha evaluation, and remedial measures for marital bliss.
                         </p>
                     </div>
-                    <div class="border-t border-slate-200 pt-4 flex items-center justify-between">
+                    <div class="border-t border-slate-200 pt-4 flex items-center justify-between relative z-10">
                         <span class="text-lg font-bold text-amber-600">From ₹1,100</span>
                         <a href="services.html" class="text-xs font-bold text-slate-800 hover:text-gold-500 flex items-center gap-1">
                             <span>Learn More</span>
@@ -268,8 +329,17 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="glass-card-light rounded-3xl p-8 flex flex-col justify-between hover:border-amber-500 transition-all duration-300 group">
-                    <div>
+                <div class="glass-card-light rounded-3xl p-8 flex flex-col justify-between hover:border-amber-500 transition-all duration-300 group relative overflow-hidden">
+                    <svg class="w-32 h-32 text-amber-500/10 absolute -top-8 -right-8 pointer-events-none group-hover:rotate-45 group-hover:scale-110 transition-transform duration-700" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                        <circle cx="50" cy="50" r="45" stroke-width="0.8" stroke-dasharray="2 2" />
+                        <circle cx="50" cy="50" r="30" stroke-width="1" />
+                        <path d="M50 5 C60 20 60 35 50 45 C40 35 40 20 50 5 Z" stroke-width="0.8"/>
+                        <path d="M50 95 C60 80 60 65 50 55 C40 65 40 80 50 95 Z" stroke-width="0.8"/>
+                        <path d="M5 50 C20 60 35 60 45 50 C35 40 20 40 5 50 Z" stroke-width="0.8"/>
+                        <path d="M95 50 C80 60 65 60 55 50 C65 40 80 40 95 50 Z" stroke-width="0.8"/>
+                    </svg>
+
+                    <div class="relative z-10">
                         <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-600 text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all">
                             <i class="fa-solid fa-chart-line"></i>
                         </div>
@@ -280,7 +350,7 @@
                             Analyze your 10th & 11th houses, Mahadasha timing, job switch decisions, and financial growth remedies.
                         </p>
                     </div>
-                    <div class="border-t border-slate-200 pt-4 flex items-center justify-between">
+                    <div class="border-t border-slate-200 pt-4 flex items-center justify-between relative z-10">
                         <span class="text-lg font-bold text-amber-600">From ₹1,500</span>
                         <a href="services.html" class="text-xs font-bold text-slate-800 hover:text-gold-500 flex items-center gap-1">
                             <span>Learn More</span>
@@ -290,8 +360,17 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="glass-card-light rounded-3xl p-8 flex flex-col justify-between hover:border-amber-500 transition-all duration-300 group">
-                    <div>
+                <div class="glass-card-light rounded-3xl p-8 flex flex-col justify-between hover:border-amber-500 transition-all duration-300 group relative overflow-hidden">
+                    <svg class="w-32 h-32 text-amber-500/10 absolute -top-8 -right-8 pointer-events-none group-hover:rotate-45 group-hover:scale-110 transition-transform duration-700" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                        <circle cx="50" cy="50" r="45" stroke-width="0.8" stroke-dasharray="2 2" />
+                        <circle cx="50" cy="50" r="30" stroke-width="1" />
+                        <path d="M50 5 C60 20 60 35 50 45 C40 35 40 20 50 5 Z" stroke-width="0.8"/>
+                        <path d="M50 95 C60 80 60 65 50 55 C40 65 40 80 50 95 Z" stroke-width="0.8"/>
+                        <path d="M5 50 C20 60 35 60 45 50 C35 40 20 40 5 50 Z" stroke-width="0.8"/>
+                        <path d="M95 50 C80 60 65 60 55 50 C65 40 80 40 95 50 Z" stroke-width="0.8"/>
+                    </svg>
+
+                    <div class="relative z-10">
                         <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-600 text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all">
                             <i class="fa-solid fa-compass-drafting"></i>
                         </div>
@@ -302,7 +381,7 @@
                             Correct home & office directional defects non-destructively using copper pyramids & elemental balancing.
                         </p>
                     </div>
-                    <div class="border-t border-slate-200 pt-4 flex items-center justify-between">
+                    <div class="border-t border-slate-200 pt-4 flex items-center justify-between relative z-10">
                         <span class="text-lg font-bold text-amber-600">From ₹2,500</span>
                         <a href="services.html" class="text-xs font-bold text-slate-800 hover:text-gold-500 flex items-center gap-1">
                             <span>Learn More</span>
@@ -546,6 +625,33 @@
                     menuIcon.classList.add('fa-xmark');
                 }
             });
+        }
+
+        // Rangoli Scroll Animation Observer
+        const servicesSection = document.getElementById('featured-services-section');
+        const rangoliLeft = document.getElementById('rangoliMotifLeft');
+        const rangoliRight = document.getElementById('rangoliMotifRight');
+
+        if (servicesSection && rangoliLeft && rangoliRight) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        rangoliLeft.classList.remove('opacity-20', 'scale-90');
+                        rangoliLeft.classList.add('opacity-40', 'scale-100');
+
+                        rangoliRight.classList.remove('opacity-20', 'scale-90');
+                        rangoliRight.classList.add('opacity-40', 'scale-100');
+                    } else {
+                        rangoliLeft.classList.remove('opacity-40', 'scale-100');
+                        rangoliLeft.classList.add('opacity-20', 'scale-90');
+
+                        rangoliRight.classList.remove('opacity-40', 'scale-100');
+                        rangoliRight.classList.add('opacity-20', 'scale-90');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            observer.observe(servicesSection);
         }
     </script>
 </body>
