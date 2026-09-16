@@ -10,7 +10,6 @@ import {
   ArrowRight,
   CheckCircle2,
   Phone,
-  Mail,
   MessageCircle,
   Calendar
 } from "lucide-react";
@@ -19,21 +18,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { Badge } from "@/components/ui/badge";
 
 export default function ServicesPage() {
-  const serviceList = [
-    {
-      id: "horoscope",
-      title: "Horoscope Analysis & Consultation",
-      description:
-        "Comprehensive birth chart (Janma Kundali) reading combined with Bhrigu Nandi Nadi planetary combinations to map life events, Dasha transits, and practical remedies.",
-      icon: Sparkles,
-      badge: "Primary Featured Service",
-      highlights: [
-        "Janma Kundali & Planetary Strength Reading",
-        "Current Dasha & Transit Timing Evaluation",
-        "Bhrigu Nandi Nadi Specific Life Events Mapping",
-        "Personalized Mantra & Gemstone Remedies",
-      ],
-    },
+  const specializations = [
     {
       id: "marriage",
       title: "Marriage & Relationship Compatibility",
@@ -110,7 +95,7 @@ export default function ServicesPage() {
     {
       step: "01",
       title: "Share Details or Schedule",
-      desc: "Provide your birth details (Date, Time, Place of birth) or property details for consultation.",
+      desc: "Provide your birth details (Date, Time, Place of birth) or specific query.",
     },
     {
       step: "02",
@@ -133,7 +118,7 @@ export default function ServicesPage() {
             Vedic & Bhrigu Nandi Nadi Offerings
           </Badge>
           <h1 className="font-heading text-4xl sm:text-5xl font-extrabold text-slate-900 mb-4">
-            Our Consultation <span className="gold-gradient-text">Services</span>
+            Our Services & <span className="gold-gradient-text">Specializations</span>
           </h1>
           <p className="text-slate-600 text-base max-w-2xl mx-auto">
             Comprehensive Vedic astrological guidance, Janma Kundali analysis, Bhrigu Nandi Nadi readings, and practical life remedies.
@@ -141,14 +126,106 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* SERVICES GRID */}
-      <section className="py-20 bg-white">
+      {/* SECTION 1: PRIMARY SERVICE */}
+      <section className="py-20 bg-white border-b border-amber-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <Badge variant="default" className="mb-3 bg-amber-500/10 border-amber-500/30 text-amber-800 font-bold">
+              <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500 mr-1.5" />
+              Primary Service
+            </Badge>
+            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+              Horoscope Analysis & <span className="gold-gradient-text">Consultation</span>
+            </h2>
+            <p className="text-slate-600 text-base">
+              Our core flagship consultation combining classical Janma Kundali reading with precise Bhrigu Nandi Nadi techniques.
+            </p>
+          </div>
+
+          <div className="glass-card-light rounded-3xl p-8 sm:p-12 border-2 border-amber-500/30 relative overflow-hidden shadow-xl bg-gradient-to-br from-amber-50/60 via-white to-amber-50/40">
+            <div className="grid lg:grid-cols-12 gap-8 items-center relative z-10">
+              <div className="lg:col-span-8">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold mb-4 uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                  <span>Flagship Consultation</span>
+                </div>
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+                  Full Birth Chart & Bhrigu Nandi Nadi Reading
+                </h3>
+                <p className="text-slate-600 text-base leading-relaxed mb-6">
+                  Get a complete, multi-dimensional evaluation of your Janma Kundali. We analyze your planetary strengths, current Mahadasha/Antardasha transit timing, and specific Bhrigu Nandi Nadi planetary combinations to provide practical solutions for health, wealth, relationships, and career direction.
+                </p>
+
+                <div className="grid sm:grid-cols-2 gap-4 mb-8 text-sm text-slate-700">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span>Exact Birth Chart & Planetary Strength Reading</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span>Current Dasha & Transit Timing Evaluation</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span>Bhrigu Nandi Nadi Specific Life Events Mapping</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span>Personalized Mantra & Gemstone Remedies</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-4">
+                  <Button className="btn-gold-shimmer px-6" asChild>
+                    <Link href="/contact?service=Horoscope%20Analysis%20%26%20Consultation" className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4 text-white" />
+                      <span>Book Horoscope Reading</span>
+                    </Link>
+                  </Button>
+                  <Button variant="outline" className="border-amber-500/40 text-slate-800 hover:bg-amber-500/10" asChild>
+                    <a href="tel:+919319506529" className="flex items-center gap-2">
+                      <Phone className="w-4 h-4 text-amber-600" />
+                      <span>Call Now (+91 9319506529)</span>
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              <div className="lg:col-span-4 text-center">
+                <div className="p-8 rounded-2xl bg-white border border-amber-500/20 shadow-lg">
+                  <Sparkles className="w-12 h-12 text-amber-600 mx-auto mb-4 animate-pulse" />
+                  <h4 className="font-heading text-xl font-bold text-slate-900 mb-2">1-on-1 Direct Session</h4>
+                  <p className="text-xs text-slate-600 mb-6">Connect directly via Phone Call, WhatsApp, or Email.</p>
+                  <div className="py-3 px-4 rounded-xl bg-amber-50 border border-amber-500/20 text-xs font-bold text-amber-800">
+                    High Precision Guidance
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2: SPECIALIZATIONS */}
+      <section className="py-20 bg-light-pattern border-b border-amber-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <Badge variant="default" className="mb-3">
+              Specialized Guidance
+            </Badge>
+            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+              Our <span className="gold-gradient-text">Specializations</span>
+            </h2>
+            <p className="text-slate-600 text-base">
+              Explore specialized astrological consultations tailored to solve specific life aspects.
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceList.map((service) => {
+            {specializations.map((service) => {
               const Icon = service.icon;
               return (
-                <Card key={service.id} className="glass-card-light flex flex-col justify-between hover:border-amber-500/50 shadow-lg">
+                <Card key={service.id} className="glass-card-light flex flex-col justify-between hover:border-amber-500/50 shadow-lg transition-all duration-300 hover:-translate-y-1">
                   <div>
                     <CardHeader>
                       <div className="flex items-center justify-between mb-4">
@@ -189,7 +266,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CONSULTATION PROCESS TIMELINE */}
-      <section className="py-20 bg-light-pattern border-y border-amber-500/10">
+      <section className="py-20 bg-white border-b border-amber-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <Badge variant="default" className="mb-3">
