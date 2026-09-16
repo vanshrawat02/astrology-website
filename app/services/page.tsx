@@ -1,15 +1,18 @@
 import Link from "next/link";
 import {
-  Compass,
   Sparkles,
-  Building2,
-  Calendar,
-  Gem,
-  HelpCircle,
+  Heart,
+  Briefcase,
+  Baby,
+  Coins,
+  Plane,
+  Star,
   ArrowRight,
   CheckCircle2,
   Phone,
+  Mail,
   MessageCircle,
+  Calendar
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
@@ -18,75 +21,87 @@ import { Badge } from "@/components/ui/badge";
 export default function ServicesPage() {
   const serviceList = [
     {
-      id: "kundali",
-      title: "Kundali & Marriage Compatibility (Ashtakoot Milan)",
+      id: "horoscope",
+      title: "Horoscope Analysis & Consultation",
       description:
-        "Ensure long-term harmony, mutual respect, and marital happiness with exhaustive Janma Kundali analysis and Nadi/Manglik remedies.",
-      icon: Compass,
+        "Comprehensive birth chart (Janma Kundali) reading combined with Bhrigu Nandi Nadi planetary combinations to map life events, Dasha transits, and practical remedies.",
+      icon: Sparkles,
+      badge: "Primary Featured Service",
+      highlights: [
+        "Janma Kundali & Planetary Strength Reading",
+        "Current Dasha & Transit Timing Evaluation",
+        "Bhrigu Nandi Nadi Specific Life Events Mapping",
+        "Personalized Mantra & Gemstone Remedies",
+      ],
+    },
+    {
+      id: "marriage",
+      title: "Marriage & Relationship Compatibility",
+      description:
+        "Exhaustive Ashtakoot Guna Milan (36 Points), Nadi Dosha, Manglik analysis, and dispute resolution for lifelong marital bliss.",
+      icon: Heart,
+      badge: "Popular",
       highlights: [
         "Ashtakoot Guna Milan (36 Points Evaluation)",
         "Manglik & Nadi Dosha Analysis + Remedies",
-        "Dasha Timing for Marriage & Family Life",
+        "Dasha Timing for Marriage & Harmony",
+        "Relationship Longevity Guidance",
       ],
     },
     {
       id: "career",
-      title: "Career, Business & Financial Growth Analysis",
+      title: "Career & Business Growth",
       description:
-        "Navigate job switches, promotions, business expansions, and financial investments aligned with favorable planetary Dasha transits.",
-      icon: Sparkles,
+        "Identify favorable Mahadasha transits, ideal job switches, promotion timings, startup launch dates, and business expansion strategies.",
+      icon: Briefcase,
+      badge: "High Accuracy",
       highlights: [
         "Optimal Timing for Job Changes & Startup Launch",
-        "Financial Wealth House (2nd & 11th) Inspection",
-        "Partnership Compatibility & Foreign Opportunities",
+        "Business Partnership Compatibility Audit",
+        "10th & 11th Houses Career Transit Mapping",
+        "Promotion & Leadership Opportunity Timing",
       ],
     },
     {
-      id: "vastu",
-      title: "100% Zero-Demolition Vastu Shastra Consultation",
+      id: "family",
+      title: "Child Birth & Family Prospects",
       description:
-        "Harmonize your residential or commercial space without breaking walls. We utilize elemental balancing, metallic strips, and copper pyramids.",
-      icon: Building2,
+        "Evaluate Santana Yoga, progeny timing, family peace, and ancestral planetary alignment for progeny wellbeing.",
+      icon: Baby,
+      badge: "Family Peace",
       highlights: [
-        "No Structural Demolition Required",
-        "Commercial, Office & Residential Spatial Audits",
-        "Elemental Balancing for Entrance & Kitchen Placement",
+        "5th House & Santana Yoga Inspection",
+        "Progeny Favorable Dasha Timing",
+        "Family Harmony & Ancestral Peace Remedies",
+        "Child Development & Education Focus",
       ],
     },
     {
-      id: "varshphal",
-      title: "Varshphal & Annual Horoscope Report",
+      id: "wealth",
+      title: "Finance & Wealth Guidance",
       description:
-        "A customized 12-month solar return chart (Annual Kundali) detailing upcoming opportunities, health precautions, and month-wise focus.",
-      icon: Calendar,
+        "In-depth 2nd and 11th wealth houses evaluation, debt recovery strategies, safe investments, and financial stability remedies.",
+      icon: Coins,
+      badge: "Prosperity",
       highlights: [
-        "Month-by-Month Predictive Breakdown",
-        "Transit Analysis of Saturn, Rahu & Ketu",
-        "Personalized Monthly Mantra & Upay Remedies",
+        "Wealth Houses (2nd & 11th) Evaluation",
+        "Debt Recovery & Capital Retention Timing",
+        "Favorable Investment Periods Analysis",
+        "Financial Abundance Astro Remedies",
       ],
     },
     {
-      id: "gemstones",
-      title: "Certified Gemstone & Energized Ratan Guidance",
+      id: "travel",
+      title: "Foreign Travels & Relocation",
       description:
-        "Identify exact gemstones matching your ascendant (Lagna) and current Mahadasha to enhance wealth, peace, and vitality safely.",
-      icon: Gem,
+        "Inspect 9th & 12th houses for overseas employment, higher studies abroad, PR/visa success, and foreign settlement.",
+      icon: Plane,
+      badge: "Global Growth",
       highlights: [
-        "Lagna Chart & Planetary Strength Audit",
-        "100% Natural Lab Certified Gemstones Recommendation",
-        "Pran Pratishtha & Shubh Muhurat Wearing Rituals",
-      ],
-    },
-    {
-      id: "prashna",
-      title: "Prashna Kundali (Horary Astrology for Urgent Questions)",
-      description:
-        "Ideal when exact date, time, or place of birth is missing. Provides immediate, clear answers for lost items, decisions, and immediate choices.",
-      icon: HelpCircle,
-      highlights: [
-        "No Birth Time Required",
-        "Immediate Clarity on Critical Questions",
-        "High-Precision Time-of-Query Chart Calculation",
+        "9th & 12th Houses Travel Transits Reading",
+        "PR, Student Visa & Work Permit Timing",
+        "Foreign Career & Overseas Business Growth",
+        "Relocation Remedies for Smooth Settlement",
       ],
     },
   ];
@@ -95,33 +110,33 @@ export default function ServicesPage() {
     {
       step: "01",
       title: "Share Details or Schedule",
-      desc: "Fill in your birth details (Date, Time, Place) or property layout for Vastu consultation.",
+      desc: "Provide your birth details (Date, Time, Place of birth) or property details for consultation.",
     },
     {
       step: "02",
-      title: "Detailed Consultation",
-      desc: "Connect 1-on-1 via Phone or Video Call with Acharya Rajesh Sharma for detailed analysis.",
+      title: "1-on-1 Expert Consultation",
+      desc: "Connect directly via Phone Call, Video Call, or Email with certified experts.",
     },
     {
       step: "03",
-      title: "Receive Written PDF & Remedies",
-      desc: "Get your customized report along with practical, zero-demolition remedies and mantras.",
+      title: "Receive Guidance & Remedies",
+      desc: "Get clear actionable insights along with practical mantras, gemstones, and remedies.",
     },
   ];
 
   return (
-    <>
+    <div className="bg-white text-slate-900 min-h-screen">
       {/* PAGE BANNER */}
-      <section className="bg-light-pattern py-16 border-b border-amber-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-light-pattern py-16 border-b border-amber-500/10 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Badge variant="default" className="mb-2">
-            Authentic Vedic Offerings
+            Vedic & Bhrigu Nandi Nadi Offerings
           </Badge>
           <h1 className="font-heading text-4xl sm:text-5xl font-extrabold text-slate-900 mb-4">
             Our Consultation <span className="gold-gradient-text">Services</span>
           </h1>
           <p className="text-slate-600 text-base max-w-2xl mx-auto">
-            Comprehensive Vedic astrological guidance, Janma Kundali analysis, and scientific Zero-Demolition Vastu Shastra remedies.
+            Comprehensive Vedic astrological guidance, Janma Kundali analysis, Bhrigu Nandi Nadi readings, and practical life remedies.
           </p>
         </div>
       </section>
@@ -133,17 +148,22 @@ export default function ServicesPage() {
             {serviceList.map((service) => {
               const Icon = service.icon;
               return (
-                <Card key={service.id} className="flex flex-col justify-between hover:border-amber-500/50">
+                <Card key={service.id} className="glass-card-light flex flex-col justify-between hover:border-amber-500/50 shadow-lg">
                   <div>
                     <CardHeader>
-                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-gold-600 to-amber-400 flex items-center justify-center text-white mb-4 shadow-md">
-                        <Icon className="w-6 h-6" />
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-gold-600 to-amber-500 flex items-center justify-center text-white shadow-md">
+                          <Icon className="w-6 h-6" />
+                        </div>
+                        <Badge className="bg-amber-100 border border-amber-500/30 text-amber-800 text-[11px] font-bold">
+                          {service.badge}
+                        </Badge>
                       </div>
-                      <CardTitle>{service.title}</CardTitle>
+                      <CardTitle className="text-xl font-bold text-slate-900">{service.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
-                      <CardDescription>{service.description}</CardDescription>
-                      <ul className="space-y-2 pt-2 border-t border-slate-100">
+                      <CardDescription className="text-slate-600 text-sm leading-relaxed">{service.description}</CardDescription>
+                      <ul className="space-y-2 pt-3 border-t border-amber-500/15">
                         {service.highlights.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-xs text-slate-700">
                             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -154,7 +174,7 @@ export default function ServicesPage() {
                     </CardContent>
                   </div>
                   <div className="p-6 pt-0">
-                    <Button variant="emerald" className="w-full mt-4" asChild>
+                    <Button variant="default" className="btn-gold-shimmer w-full mt-4" asChild>
                       <Link href={`/contact?service=${encodeURIComponent(service.title)}`}>
                         <span>Book Consultation</span>
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -185,7 +205,7 @@ export default function ServicesPage() {
 
           <div className="grid md:grid-cols-3 gap-8 relative">
             {steps.map((item, idx) => (
-              <Card key={idx} className="relative text-center">
+              <Card key={idx} className="glass-card-light relative text-center p-8">
                 <span className="w-12 h-12 rounded-full bg-amber-500/10 border border-amber-500/30 text-gold-600 font-extrabold flex items-center justify-center mx-auto mb-6 text-lg">
                   {item.step}
                 </span>
@@ -204,30 +224,29 @@ export default function ServicesPage() {
             Ready to Unlock Cosmic Clarity?
           </h2>
           <p className="text-slate-300 text-base max-w-2xl mx-auto mb-8">
-            Speak directly with Acharya Rajesh Sharma today and discover actionable solutions.
+            Speak directly with certified experts today via Call, Email, or WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button size="lg" className="btn-gold-shimmer" asChild>
+              <a href="tel:+919319506529" className="flex items-center gap-2">
+                <Phone className="w-5 h-5 text-white" />
+                <span>Call Now (+91 9319506529)</span>
+              </a>
+            </Button>
             <Button size="lg" variant="emerald" asChild>
               <a
-                href="https://wa.me/919999999999?text=Hi%20Cosmic%20Guidance,%20I%20want%20to%20book%20a%20consultation."
+                href="https://wa.me/919319506529?text=Hi%20Vedic%20Astrology,%20I%20would%20like%20to%20book%20a%20consultation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>Instant WhatsApp Booking</span>
+                <span>WhatsApp Booking</span>
               </a>
-            </Button>
-            <Button size="lg" variant="outline" asChild className="text-white border-amber-500/50 hover:bg-amber-500/20">
-              <Link href="/contact" className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span>Schedule Call</span>
-              </Link>
             </Button>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
-
