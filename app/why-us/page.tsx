@@ -74,7 +74,7 @@ export default function WhyUsPage() {
 
             <Card className="glass-card-light text-center p-6">
               <Award className="w-8 h-8 text-amber-600 mx-auto mb-3" />
-              <span className="block font-extrabold text-3xl sm:text-4xl text-slate-900 mb-1">15+ Yrs</span>
+              <span className="block font-extrabold text-3xl sm:text-4xl text-slate-900 mb-1">5+ Yrs</span>
               <span className="text-xs text-slate-500 uppercase font-semibold">Vedic Practice</span>
             </Card>
 
