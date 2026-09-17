@@ -295,12 +295,12 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="py-16 bg-slate-900 text-white">
+      <section className="py-16 bg-light-pattern border-b border-amber-500/10 text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
-            Ready to Unlock Cosmic Clarity?
+          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+            Ready to Unlock <span className="gold-gradient-text">Cosmic Clarity?</span>
           </h2>
-          <p className="text-slate-300 text-base max-w-2xl mx-auto mb-8">
+          <p className="text-slate-600 text-base max-w-2xl mx-auto mb-8">
             Speak directly with certified experts today via Call, Email, or WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

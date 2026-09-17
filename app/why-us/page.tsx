@@ -190,7 +190,7 @@ export default function WhyUsPage() {
 
               <div className="lg:col-span-4 text-center">
                 <div className="w-44 h-44 rounded-full bg-gradient-to-tr from-gold-600 via-amber-500 to-amber-300 mx-auto p-1.5 shadow-xl">
-                  <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-amber-400 font-heading font-extrabold text-4xl">
+                  <div className="w-full h-full rounded-full bg-amber-50 border-2 border-amber-300 flex items-center justify-center text-amber-900 font-heading font-extrabold text-4xl">
                     VAN
                   </div>
                 </div>

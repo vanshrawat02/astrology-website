@@ -24,25 +24,25 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-amber-500/20 shadow-sm transition-all duration-300">
       {/* Top bar with quick contact info */}
-      <div className="bg-slate-900 text-slate-300 py-1.5 text-xs">
+      <div className="bg-amber-500/10 border-b border-amber-500/20 text-slate-800 py-1.5 text-xs font-medium">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div className="flex items-center gap-2 text-amber-400 font-medium">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
+          <div className="flex items-center gap-2 text-amber-800 font-semibold">
+            <Sparkles className="w-3.5 h-3.5 text-amber-600 animate-pulse" />
             <span>Certified Experts in Vedic Astrology & Bhrigu Nandi Nadi</span>
           </div>
           <div className="flex items-center gap-6">
             <a
               href={`mailto:${businessEmail}`}
-              className="flex items-center gap-1.5 hover:text-amber-400 transition-colors"
+              className="flex items-center gap-1.5 text-slate-700 hover:text-amber-700 transition-colors"
             >
-              <Mail className="w-3.5 h-3.5 text-amber-400" />
+              <Mail className="w-3.5 h-3.5 text-amber-600" />
               <span>{businessEmail}</span>
             </a>
             <a
               href="tel:+919319506529"
-              className="flex items-center gap-1.5 hover:text-amber-400 transition-colors font-semibold text-white"
+              className="flex items-center gap-1.5 text-slate-900 hover:text-amber-700 transition-colors font-bold"
             >
-              <Phone className="w-3.5 h-3.5 text-amber-400" />
+              <Phone className="w-3.5 h-3.5 text-amber-600" />
               <span>{businessPhone}</span>
             </a>
           </div>

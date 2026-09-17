@@ -216,21 +216,17 @@ export default function HomePage() {
       </section>
 
       {/* ABOUT THE EXPERT SECTION */}
-      <section id="about-expert" className="py-20 lg:py-28 bg-slate-950 text-white relative overflow-hidden border-b border-amber-500/20">
-        {/* Cosmic Background Accent Glows */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
-
+      <section id="about-expert" className="py-20 lg:py-28 bg-light-pattern text-slate-900 relative overflow-hidden border-b border-amber-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Badge variant="outline" className="mb-4 border-amber-500/40 text-amber-400 bg-amber-500/10 py-1.5 px-4 text-xs font-semibold tracking-wider uppercase">
-              <Sparkles className="w-3.5 h-3.5 mr-2 text-amber-400" />
+            <Badge variant="default" className="mb-4 py-1.5 px-4 text-xs font-semibold tracking-wider uppercase">
+              <Sparkles className="w-3.5 h-3.5 mr-2 text-amber-500 fill-amber-500" />
               Certified Astrological Authority
             </Badge>
-            <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-white mb-6">
+            <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mb-6">
               Meet Your <span className="gold-gradient-text">Astrologer & Guide</span>
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
               Welcome. I am a certified expert in traditional Vedic Astrology and Bhrigu Nandi Nadi techniques, dedicated to offering authentic, research-backed insights to help you navigate life&apos;s pivotal decisions.
             </p>
           </div>
@@ -238,72 +234,72 @@ export default function HomePage() {
           {/* ACADEMIC & RESEARCH CREDENTIALS GRID */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {/* Credential 1 */}
-            <div className="bg-slate-900/90 border border-amber-500/30 rounded-2xl p-6 hover:border-amber-500/60 transition-all duration-300 shadow-xl flex flex-col justify-between group">
+            <div className="glass-card-light p-6 rounded-2xl border border-amber-500/30 bg-white hover:border-amber-500/60 transition-all duration-300 shadow-md flex flex-col justify-between group">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-600 via-amber-500 to-amber-400 flex items-center justify-center text-slate-950 mb-5 shadow-lg group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-gold-600 via-amber-500 to-amber-400 flex items-center justify-center text-white mb-5 shadow-md group-hover:scale-105 transition-transform">
                   <GraduationCap className="w-6 h-6" />
                 </div>
-                <Badge className="bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[10px] font-bold uppercase tracking-wider mb-2">
+                <Badge className="bg-amber-100 border border-amber-500/30 text-amber-800 text-[10px] font-bold uppercase tracking-wider mb-2">
                   Academic Degree
                 </Badge>
-                <h3 className="font-heading font-bold text-lg text-white mb-2 group-hover:text-amber-300 transition-colors">
+                <h3 className="font-heading font-bold text-lg text-slate-900 mb-2 group-hover:text-amber-700 transition-colors">
                   Jyotish Alankar & Jyotish Acharya
                 </h3>
-                <p className="text-slate-400 text-xs leading-relaxed">
+                <p className="text-slate-600 text-xs leading-relaxed">
                   Honors degree from Bharatiya Vidya Bhavan, New Delhi.
                 </p>
               </div>
             </div>
 
             {/* Credential 2 */}
-            <div className="bg-slate-900/90 border border-amber-500/30 rounded-2xl p-6 hover:border-amber-500/60 transition-all duration-300 shadow-xl flex flex-col justify-between group">
+            <div className="glass-card-light p-6 rounded-2xl border border-amber-500/30 bg-white hover:border-amber-500/60 transition-all duration-300 shadow-md flex flex-col justify-between group">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-600 via-amber-500 to-amber-400 flex items-center justify-center text-slate-950 mb-5 shadow-lg group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-gold-600 via-amber-500 to-amber-400 flex items-center justify-center text-white mb-5 shadow-md group-hover:scale-105 transition-transform">
                   <Compass className="w-6 h-6" />
                 </div>
-                <Badge className="bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[10px] font-bold uppercase tracking-wider mb-2">
+                <Badge className="bg-amber-100 border border-amber-500/30 text-amber-800 text-[10px] font-bold uppercase tracking-wider mb-2">
                   Nadi Specialist
                 </Badge>
-                <h3 className="font-heading font-bold text-lg text-white mb-2 group-hover:text-amber-300 transition-colors">
+                <h3 className="font-heading font-bold text-lg text-slate-900 mb-2 group-hover:text-amber-700 transition-colors">
                   Bhrigu Nandi Nadi Specialist
                 </h3>
-                <p className="text-slate-400 text-xs leading-relaxed">
+                <p className="text-slate-600 text-xs leading-relaxed">
                   Certified under the direct guidance of Dr. Maheshanand Joshi.
                 </p>
               </div>
             </div>
 
             {/* Credential 3 */}
-            <div className="bg-slate-900/90 border border-amber-500/30 rounded-2xl p-6 hover:border-amber-500/60 transition-all duration-300 shadow-xl flex flex-col justify-between group">
+            <div className="glass-card-light p-6 rounded-2xl border border-amber-500/30 bg-white hover:border-amber-500/60 transition-all duration-300 shadow-md flex flex-col justify-between group">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-600 via-amber-500 to-amber-400 flex items-center justify-center text-slate-950 mb-5 shadow-lg group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-gold-600 via-amber-500 to-amber-400 flex items-center justify-center text-white mb-5 shadow-md group-hover:scale-105 transition-transform">
                   <Scroll className="w-6 h-6" />
                 </div>
-                <Badge className="bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[10px] font-bold uppercase tracking-wider mb-2">
+                <Badge className="bg-amber-100 border border-amber-500/30 text-amber-800 text-[10px] font-bold uppercase tracking-wider mb-2">
                   Vedic Diploma
                 </Badge>
-                <h3 className="font-heading font-bold text-lg text-white mb-2 group-hover:text-amber-300 transition-colors">
+                <h3 className="font-heading font-bold text-lg text-slate-900 mb-2 group-hover:text-amber-700 transition-colors">
                   Diploma in Vedic Astrology
                 </h3>
-                <p className="text-slate-400 text-xs leading-relaxed">
+                <p className="text-slate-600 text-xs leading-relaxed">
                   Shree Maharshi College of Vedic Astrology, Udaipur.
                 </p>
               </div>
             </div>
 
             {/* Credential 4 */}
-            <div className="bg-slate-900/90 border border-amber-500/30 rounded-2xl p-6 hover:border-amber-500/60 transition-all duration-300 shadow-xl flex flex-col justify-between group">
+            <div className="glass-card-light p-6 rounded-2xl border border-amber-500/30 bg-white hover:border-amber-500/60 transition-all duration-300 shadow-md flex flex-col justify-between group">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-600 via-amber-500 to-amber-400 flex items-center justify-center text-slate-950 mb-5 shadow-lg group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-gold-600 via-amber-500 to-amber-400 flex items-center justify-center text-white mb-5 shadow-md group-hover:scale-105 transition-transform">
                   <Award className="w-6 h-6" />
                 </div>
-                <Badge className="bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[10px] font-bold uppercase tracking-wider mb-2">
+                <Badge className="bg-amber-100 border border-amber-500/30 text-amber-800 text-[10px] font-bold uppercase tracking-wider mb-2">
                   Advanced Research
                 </Badge>
-                <h3 className="font-heading font-bold text-lg text-white mb-2 group-hover:text-amber-300 transition-colors">
+                <h3 className="font-heading font-bold text-lg text-slate-900 mb-2 group-hover:text-amber-700 transition-colors">
                   Advanced Research Certifications
                 </h3>
-                <p className="text-slate-400 text-xs leading-relaxed">
+                <p className="text-slate-600 text-xs leading-relaxed">
                   Specialized post-doctoral level research in classical planetary combinations.
                 </p>
               </div>
@@ -311,39 +307,39 @@ export default function HomePage() {
           </div>
 
           {/* PRICING & SPECIALIZATIONS BADGE CARD */}
-          <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border-2 border-amber-500/40 rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden">
+          <div className="glass-card-light rounded-3xl p-8 sm:p-10 border-2 border-amber-500/30 shadow-xl bg-gradient-to-br from-amber-50/80 via-white to-amber-50/50 text-slate-900 relative overflow-hidden">
             <div className="grid lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8 space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-extrabold uppercase tracking-wider">
-                  <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-900 text-xs font-extrabold uppercase tracking-wider">
+                  <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
                   <span>Primary Consultation Offering</span>
                 </div>
-                <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-white">
+                <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">
                   Full Horoscope Analysis & Personalized Consultation
                 </h3>
-                <p className="text-slate-300 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   In-depth evaluation of your Janma Kundali combined with Bhrigu Nandi Nadi precision transits to address your core life queries.
                 </p>
 
                 {/* Specializations Pills */}
                 <div>
-                  <span className="text-xs font-bold text-amber-400 uppercase tracking-wider block mb-2">
+                  <span className="text-xs font-bold text-amber-900 uppercase tracking-wider block mb-2">
                     Key Specializations Covered:
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1.5 rounded-lg bg-slate-800/90 border border-amber-500/30 text-slate-200 text-xs font-medium">
+                    <span className="px-3 py-1.5 rounded-lg bg-white border border-amber-500/30 text-slate-800 text-xs font-semibold shadow-sm">
                       ❤️ Marriage & Relationships
                     </span>
-                    <span className="px-3 py-1.5 rounded-lg bg-slate-800/90 border border-amber-500/30 text-slate-200 text-xs font-medium">
+                    <span className="px-3 py-1.5 rounded-lg bg-white border border-amber-500/30 text-slate-800 text-xs font-semibold shadow-sm">
                       💼 Career Growth
                     </span>
-                    <span className="px-3 py-1.5 rounded-lg bg-slate-800/90 border border-amber-500/30 text-slate-200 text-xs font-medium">
+                    <span className="px-3 py-1.5 rounded-lg bg-white border border-amber-500/30 text-slate-800 text-xs font-semibold shadow-sm">
                       👶 Child Birth
                     </span>
-                    <span className="px-3 py-1.5 rounded-lg bg-slate-800/90 border border-amber-500/30 text-slate-200 text-xs font-medium">
+                    <span className="px-3 py-1.5 rounded-lg bg-white border border-amber-500/30 text-slate-800 text-xs font-semibold shadow-sm">
                       🪙 Financial Stability
                     </span>
-                    <span className="px-3 py-1.5 rounded-lg bg-slate-800/90 border border-amber-500/30 text-slate-200 text-xs font-medium">
+                    <span className="px-3 py-1.5 rounded-lg bg-white border border-amber-500/30 text-slate-800 text-xs font-semibold shadow-sm">
                       ✈️ Foreign Travels
                     </span>
                   </div>
@@ -352,12 +348,12 @@ export default function HomePage() {
 
               {/* Pricing & Direct CTA */}
               <div className="lg:col-span-4 text-center lg:text-right border-t lg:border-t-0 lg:border-l border-amber-500/20 pt-6 lg:pt-0 lg:pl-8 flex flex-col items-center lg:items-end justify-center">
-                <span className="text-xs uppercase font-extrabold text-amber-400 tracking-wider block mb-1">
+                <span className="text-xs uppercase font-extrabold text-amber-800 tracking-wider block mb-1">
                   Fixed Consultation Fee
                 </span>
                 <div className="flex items-baseline gap-1.5 mb-4">
-                  <span className="font-heading text-4xl font-extrabold text-white">₹1,500</span>
-                  <span className="text-xs font-semibold text-slate-400">INR / session</span>
+                  <span className="font-heading text-4xl font-extrabold text-amber-950">₹1,500</span>
+                  <span className="text-xs font-bold text-slate-600">INR / session</span>
                 </div>
                 <Button size="lg" className="btn-gold-shimmer w-full sm:w-auto px-8 py-6 text-base font-bold shadow-xl" asChild>
                   <a href="#booking-system" className="flex items-center justify-center gap-2">
