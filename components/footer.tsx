@@ -59,6 +59,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/gemstones" className="hover:text-amber-400 transition-colors">
+                  Gemstones & Remedies
+                </Link>
+              </li>
+              <li>
                 <Link href="/why-us" className="hover:text-amber-400 transition-colors">
                   Why Choose Us
                 </Link>
