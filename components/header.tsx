@@ -25,25 +25,26 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-amber-500/20 shadow-sm transition-all duration-300">
       {/* Top bar with quick contact info */}
-      <div className="bg-amber-500/10 border-b border-amber-500/20 text-slate-800 py-1.5 text-xs font-medium">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div className="flex items-center gap-2 text-amber-800 font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600 animate-pulse" />
-            <span>Certified Experts in Vedic Astrology & Bhrigu Nandi Nadi</span>
+      <div className="bg-amber-500/10 border-b border-amber-500/20 text-slate-800 py-1.5 text-[11px] sm:text-xs font-medium">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-2">
+          <div className="flex items-center gap-1.5 text-amber-900 font-semibold text-center sm:text-left">
+            <Sparkles className="w-3.5 h-3.5 text-amber-600 animate-pulse shrink-0" />
+            <span className="leading-tight">Certified Experts in Vedic Astrology & Bhrigu Nandi Nadi</span>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-slate-800">
             <a
               href={`mailto:${businessEmail}`}
-              className="flex items-center gap-1.5 text-slate-700 hover:text-amber-700 transition-colors"
+              className="flex items-center gap-1 text-slate-700 hover:text-amber-700 transition-colors max-w-[210px] sm:max-w-none truncate"
+              title={businessEmail}
             >
-              <Mail className="w-3.5 h-3.5 text-amber-600" />
-              <span>{businessEmail}</span>
+              <Mail className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+              <span className="truncate">{businessEmail}</span>
             </a>
             <a
               href="tel:+919319506529"
-              className="flex items-center gap-1.5 text-slate-900 hover:text-amber-700 transition-colors font-bold"
+              className="flex items-center gap-1 text-slate-900 hover:text-amber-700 transition-colors font-bold shrink-0"
             >
-              <Phone className="w-3.5 h-3.5 text-amber-600" />
+              <Phone className="w-3.5 h-3.5 text-amber-600 shrink-0" />
               <span>{businessPhone}</span>
             </a>
           </div>
