@@ -20,9 +20,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Cosmic Guidance | Vedic Astrology & Zero-Demolition Vastu Consultation",
+  title: "Nadiveda | Vedic Astrology & Bhrigu Nandi Nadi Consultation",
   description:
-    "Certified Vedic Astrology & Zero-Demolition Vastu Shastra consultation by Acharya Rajesh Sharma. Kundali Matching, Career Predictions, Gemstones, and Annual Horoscopes.",
+    "Certified Vedic Astrology & Bhrigu Nandi Nadi consultation by Nadiveda. Kundali Matching, Career Predictions, Gemstones, and Annual Horoscopes.",
 };
 
 export default function RootLayout({

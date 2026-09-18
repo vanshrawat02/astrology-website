@@ -12,15 +12,19 @@ export function Footer() {
           {/* Brand Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-500 to-purple-600 flex items-center justify-center text-white">
-                <Sparkles className="w-5 h-5 text-amber-200" />
+              <div className="relative w-10 h-10 rounded-full overflow-hidden bg-amber-500/10 border border-amber-500/30 shadow-md shrink-0 flex items-center justify-center p-1">
+                <img
+                  src="/logo.png"
+                  alt="Nadiveda Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
-                <span className="font-heading font-extrabold text-lg gold-gradient-text block leading-tight">
-                  Vedic Astrology
+                <span className="font-heading font-extrabold text-xl gold-gradient-text block leading-tight tracking-wider uppercase">
+                  NADIVEDA
                 </span>
-                <span className="text-[10px] text-amber-400 font-semibold uppercase block">
-                  & Bhrigu Nandi Nadi
+                <span className="text-[10px] text-amber-400 font-semibold uppercase block tracking-wide">
+                  Vedic Astrology & Bhrigu Nandi Nadi
                 </span>
               </div>
             </div>
@@ -29,7 +33,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-4 text-amber-400 pt-2">
               <a
-                href={`https://wa.me/919319506529?text=Hi%20Vedic%20Astrology,%20I%20would%20like%20to%20book%20a%20consultation.`}
+                href={`https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-amber-300 transition-colors flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1.5 rounded-full"
@@ -144,7 +148,7 @@ export function Footer() {
           <p className="max-w-4xl mx-auto leading-relaxed">
             <strong>Disclaimer:</strong> Vedic Astrology & Bhrigu Nandi Nadi consultation provides spiritual and life guidance based on classical astrological principles.
           </p>
-          <p>© 2026 Vedic Astrology & Bhrigu Nandi Nadi Consultation. All Rights Reserved.</p>
+          <p>© 2026 Nadiveda — Vedic Astrology & Bhrigu Nandi Nadi Consultation. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

@@ -54,7 +54,7 @@ export default function WhyUsPage() {
             Trust & Credentials
           </Badge>
           <h1 className="font-heading text-4xl sm:text-5xl font-extrabold text-slate-900 mb-4">
-            Why Choose <span className="gold-gradient-text">Vedic Astrology & Bhrigu Nandi Nadi</span>
+            Why Choose <span className="gold-gradient-text">Nadiveda</span>
           </h1>
           <p className="text-slate-600 text-base max-w-2xl mx-auto">
             Discover the credentials, techniques, and uncompromising ethical foundation behind our consultation services.

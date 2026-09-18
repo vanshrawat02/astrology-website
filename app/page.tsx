@@ -68,74 +68,70 @@ export default function HomePage() {
   return (
     <div className="bg-white text-slate-900 min-h-screen font-sans">
       {/* HERO SECTION */}
-      <section className="relative bg-light-pattern pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden border-b border-amber-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="default" className="mb-6 py-2 px-5 text-xs sm:text-sm bg-amber-500/10 border-amber-500/30 text-amber-800">
-              <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500 mr-2" />
+      <section className="relative bg-light-pattern py-16 sm:py-20 lg:py-28 overflow-hidden border-b border-amber-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          
+          {/* TOP BADGE */}
+          <div className="max-w-3xl mx-auto mb-6">
+            <Badge variant="default" className="py-2 px-5 text-xs sm:text-sm bg-amber-500/10 border-amber-500/30 text-amber-900 font-bold tracking-wide uppercase">
+              <Star className="w-4 h-4 text-amber-500 fill-amber-500 mr-2 inline" />
               <span>Certified Experts in Vedic Astrology & Bhrigu Nandi Nadi</span>
             </Badge>
+          </div>
 
-            {/* Main Heading */}
-            <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight sm:leading-tight mb-6">
-              Vedic Astrology & <br />
-              <span className="gold-gradient-text">
-                Bhrigu Nandi Nadi Consultation
-              </span>
-            </h1>
+          {/* MAIN HEADLINE */}
+          <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 max-w-4xl mx-auto">
+            <span className="gold-gradient-text">Vedic Astrology</span> & <br className="hidden sm:inline" />
+            Bhrigu Nandi Nadi Consultation
+          </h1>
 
-            {/* Subheading */}
-            <p className="text-xl sm:text-2xl text-amber-700 font-bold mb-3">
-              Accurate Guidance & Solutions by Certified Experts
-            </p>
+          {/* SUB-HEADLINE */}
+          <p className="text-slate-600 text-base sm:text-xl max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
+            Gain deep, research-backed insights into your birth chart (Janma Kundali), career Mahadasha transits, marriage compatibility, and life decisions with traditional precision remedies.
+          </p>
 
-            {/* Secondary Sub-text */}
-            <p className="text-base sm:text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-              Direct Consultations Available via Call or Email
-            </p>
+          {/* CALL TO ACTION BUTTONS */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-14 max-w-md sm:max-w-none mx-auto">
+            <Button size="lg" className="btn-gold-shimmer w-full sm:w-auto px-8 py-6 text-base font-bold shadow-xl" asChild>
+              <Link href="/contact" className="flex items-center justify-center gap-2.5">
+                <Calendar className="w-5 h-5 text-white" />
+                <span>Book Consultation — ₹1,500</span>
+              </Link>
+            </Button>
 
-            {/* Call to Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
-              <Button size="lg" className="btn-gold-shimmer w-full sm:w-auto px-8 py-6 text-base font-bold shadow-lg" asChild>
-                <Link href="/contact" className="flex items-center justify-center gap-2.5">
-                  <Calendar className="w-5 h-5 text-white" />
-                  <span>Book Consultation — ₹1,500</span>
-                </Link>
-              </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto px-8 py-6 text-base border-amber-500/40 text-slate-800 hover:bg-amber-500/10 transition-all font-bold"
+              asChild
+            >
+              <a href="tel:+919319506529" className="flex items-center justify-center gap-2.5">
+                <Phone className="w-5 h-5 text-amber-600" />
+                <span>Call (+91 9319506529)</span>
+              </a>
+            </Button>
+          </div>
 
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto px-8 py-6 text-base border-amber-500/40 text-slate-800 hover:bg-amber-500/10 transition-all font-semibold"
-                asChild
-              >
-                <a href="tel:+919319506529" className="flex items-center justify-center gap-2.5">
-                  <Phone className="w-5 h-5 text-amber-600" />
-                  <span>Call (+91 9319506529)</span>
-                </a>
-              </Button>
+          {/* HERO QUICK HIGHLIGHTS */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl w-full mx-auto pt-8 border-t border-amber-500/20 text-xs sm:text-sm text-slate-700">
+            <div className="flex items-center justify-center gap-2 glass-card-light p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
+              <ShieldCheck className="w-4 h-4 text-gold-500 shrink-0" />
+              <span className="font-semibold">100% Confidential</span>
             </div>
-
-            {/* Hero Quick Highlights */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-amber-500/20 text-xs sm:text-sm text-slate-700">
-              <div className="flex items-center justify-center gap-2 glass-card-light p-3 rounded-xl">
-                <ShieldCheck className="w-4 h-4 text-gold-500" />
-                <span className="font-medium">100% Confidential</span>
-              </div>
-              <div className="flex items-center justify-center gap-2 glass-card-light p-3 rounded-xl">
-                <Compass className="w-4 h-4 text-gold-500" />
-                <span className="font-medium">Bhrigu Nandi Nadi</span>
-              </div>
-              <div className="flex items-center justify-center gap-2 glass-card-light p-3 rounded-xl">
-                <Phone className="w-4 h-4 text-gold-500" />
-                <span className="font-medium">Audio/Video Call</span>
-              </div>
-              <div className="flex items-center justify-center gap-2 glass-card-light p-3 rounded-xl">
-                <Tag className="w-4 h-4 text-gold-500" />
-                <span className="font-medium">Fixed Fee: ₹1,500 INR</span>
-              </div>
+            <div className="flex items-center justify-center gap-2 glass-card-light p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
+              <Compass className="w-4 h-4 text-gold-500 shrink-0" />
+              <span className="font-semibold">Bhrigu Nandi Nadi</span>
+            </div>
+            <div className="flex items-center justify-center gap-2 glass-card-light p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
+              <Phone className="w-4 h-4 text-gold-500 shrink-0" />
+              <span className="font-semibold">Audio/Video Call</span>
+            </div>
+            <div className="flex items-center justify-center gap-2 glass-card-light p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
+              <Tag className="w-4 h-4 text-gold-500 shrink-0" />
+              <span className="font-semibold">Fixed Fee: ₹1,500 INR</span>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -445,7 +441,7 @@ export default function HomePage() {
               </Button>
               <Button size="lg" variant="emerald" className="w-full sm:w-auto px-8 py-6 text-base font-bold" asChild>
                 <a
-                  href="https://wa.me/919319506529?text=Hi%20Vedic%20Astrology,%20I%20would%20like%20to%20book%20a%20consultation."
+                  href="https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2"

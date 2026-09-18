@@ -55,15 +55,19 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo & Business Name */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-gold-600 to-amber-500 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300">
-            <Sparkles className="w-5 h-5" />
+          <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-amber-500/10 border border-amber-500/30 shadow-md group-hover:scale-105 transition-transform duration-300 flex items-center justify-center shrink-0 p-1">
+            <img
+              src="/logo.png"
+              alt="Nadiveda Logo"
+              className="w-full h-full object-contain"
+            />
           </div>
           <div className="max-w-[240px] sm:max-w-md">
-            <span className="font-heading font-extrabold text-base sm:text-xl gold-gradient-text leading-tight block truncate">
-              Vedic Astrology
+            <span className="font-heading font-extrabold text-lg sm:text-2xl gold-gradient-text leading-none block tracking-wider uppercase">
+              NADIVEDA
             </span>
-            <span className="text-[10px] sm:text-xs text-amber-700 tracking-wider font-semibold uppercase block truncate">
-              & Bhrigu Nandi Nadi Consultation
+            <span className="text-[10px] sm:text-[11px] text-amber-700 tracking-wider font-semibold uppercase block truncate mt-0.5">
+              Vedic Astrology & Bhrigu Nandi Nadi
             </span>
           </div>
         </Link>
