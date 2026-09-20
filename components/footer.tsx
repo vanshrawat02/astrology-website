@@ -12,11 +12,11 @@ export function Footer() {
           {/* Brand Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden bg-slate-950 border border-amber-500/40 shadow-md shrink-0 flex items-center justify-center">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden bg-amber-500/10 border border-amber-500/30 shadow-md shrink-0 flex items-center justify-center p-1">
                 <img
                   src="/logo.png"
                   alt="Nadiveda Logo"
-                  className="w-full h-full object-cover scale-110"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div>
