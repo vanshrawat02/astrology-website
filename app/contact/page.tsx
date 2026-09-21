@@ -35,7 +35,7 @@ function ContactForm() {
   };
 
   return (
-    <Card className="glass-card-light p-8 sm:p-10 border border-amber-500/30 shadow-xl">
+    <Card className="glass-card-light p-5 sm:p-10 border border-amber-500/30 shadow-xl">
       <h2 className="font-heading text-2xl font-bold text-slate-900 mb-2">
         Schedule Your Consultation
       </h2>
@@ -143,21 +143,21 @@ export default function ContactPage() {
   return (
     <div className="bg-white text-slate-900 min-h-screen">
       {/* PAGE HEADER */}
-      <section className="bg-light-pattern py-16 border-b border-amber-500/10 text-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Badge variant="default" className="mb-2">
+      <section className="bg-light-pattern py-8 sm:py-16 border-b border-amber-500/10 text-center px-4">
+        <div className="max-w-4xl mx-auto">
+          <Badge variant="default" className="mb-2.5 py-1 px-3.5 text-[10px] sm:text-xs bg-amber-500/10 border-amber-500/30 text-amber-900 font-bold uppercase tracking-wider">
             1-on-1 Consultation
           </Badge>
-          <h1 className="font-heading text-4xl sm:text-5xl font-extrabold text-slate-900 mb-4">
+          <h1 className="font-heading text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2.5 leading-tight tracking-tight">
             Contact & <span className="gold-gradient-text">Book Appointment</span>
           </h1>
-          <p className="text-slate-600 text-base max-w-2xl mx-auto">
+          <p className="text-slate-600 text-xs sm:text-base max-w-2xl mx-auto leading-relaxed">
             Schedule your personalized Vedic & Bhrigu Nandi Nadi astrological consultation via Audio/Video Call, WhatsApp, or Email.
           </p>
         </div>
       </section>
 
-      <section className="py-20 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-20 lg:py-24 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           {/* LEFT FORM */}
           <div className="lg:col-span-7">

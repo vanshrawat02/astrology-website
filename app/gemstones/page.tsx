@@ -293,19 +293,19 @@ export default function GemstonesPage() {
   return (
     <div className="bg-white text-slate-900 min-h-screen font-sans">
       {/* 1. HERO SECTION */}
-      <section className="bg-light-pattern pt-16 pb-20 border-b border-amber-500/10 text-center relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <Badge variant="default" className="mb-4 py-1.5 px-4 text-xs font-semibold tracking-wider uppercase">
-            <Sparkles className="w-3.5 h-3.5 mr-2 text-amber-500 fill-amber-500" />
+      <section className="bg-light-pattern py-8 sm:py-16 border-b border-amber-500/10 text-center relative overflow-hidden px-4">
+        <div className="max-w-4xl mx-auto relative z-10">
+          <Badge variant="default" className="mb-3 py-1 px-3.5 text-[10px] sm:text-xs font-semibold tracking-wider uppercase">
+            <Sparkles className="w-3.5 h-3.5 mr-1.5 text-amber-500 fill-amber-500 inline" />
             Sacred Vedic Gemstone Science
           </Badge>
 
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
-            Navaratna: The Nine Sacred <br />
+          <h1 className="font-heading text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-3 leading-tight">
+            Navaratna: The Nine Sacred <br className="hidden sm:inline" />
             <span className="gold-gradient-text">Astrological Gemstones</span>
           </h1>
 
-          <p className="text-slate-600 text-base sm:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+          <p className="text-slate-600 text-xs sm:text-base max-w-2xl mx-auto mb-6 leading-relaxed">
             Discover how ancient planetary stones balance cosmic energies, enhance vitality, and align your life path under certified astrological guidance.
           </p>
 

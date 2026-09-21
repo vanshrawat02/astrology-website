@@ -25,24 +25,24 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-amber-500/20 shadow-sm transition-all duration-300">
       {/* Top bar with quick contact info */}
-      <div className="bg-amber-500/10 border-b border-amber-500/20 text-slate-800 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium">
-        <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-2">
-          <div className="flex items-center gap-1.5 text-amber-900 font-semibold text-center sm:text-left">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600 animate-pulse shrink-0" />
-            <span className="leading-tight">Certified Experts in Vedic Astrology & Bhrigu Nandi Nadi</span>
+      <div className="bg-amber-500/10 border-b border-amber-500/20 text-slate-800 py-1 text-[10px] sm:text-xs font-medium overflow-hidden">
+        <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5 text-amber-900 font-semibold text-[10px] sm:text-xs min-w-0 flex-1">
+            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-600 animate-pulse shrink-0" />
+            <span className="truncate">Certified Experts in Vedic Astrology & Bhrigu Nandi Nadi</span>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-0.5 text-slate-800">
+          <div className="flex items-center justify-end gap-x-3 text-slate-800 shrink-0">
             <a
               href={`mailto:${businessEmail}`}
-              className="flex items-center gap-1 text-slate-700 hover:text-amber-700 transition-colors max-w-[180px] xs:max-w-[220px] sm:max-w-none truncate"
+              className="hidden sm:flex items-center gap-1 text-slate-700 hover:text-amber-700 transition-colors"
               title={businessEmail}
             >
-              <Mail className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-600 shrink-0" />
+              <Mail className="w-3.5 h-3.5 text-amber-600 shrink-0" />
               <span className="truncate">{businessEmail}</span>
             </a>
             <a
               href="tel:+919319506529"
-              className="flex items-center gap-1 text-slate-900 hover:text-amber-700 transition-colors font-bold shrink-0"
+              className="flex items-center gap-1 text-slate-900 hover:text-amber-700 transition-colors font-bold shrink-0 text-[10px] sm:text-xs"
             >
               <Phone className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-600 shrink-0" />
               <span>{businessPhone}</span>
@@ -52,21 +52,21 @@ export function Header() {
       </div>
 
       {/* Main Navbar */}
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-14 sm:h-20 flex items-center justify-between gap-2">
         {/* Logo & Business Name */}
-        <Link href="/" className="flex items-center gap-2 sm:gap-3 group max-w-[75%] sm:max-w-none">
-          <div className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-amber-500/10 border border-amber-500/30 shadow-md group-hover:scale-105 transition-transform duration-300 flex items-center justify-center shrink-0 p-1">
+        <Link href="/" className="flex items-center gap-2 group min-w-0 flex-1">
+          <div className="relative w-8 h-8 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-amber-500/10 border border-amber-500/30 shadow-md group-hover:scale-105 transition-transform duration-300 flex items-center justify-center shrink-0 p-0.5 sm:p-1">
             <img
               src="/logo.png"
               alt="Nadiveda Logo"
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="min-w-0">
-            <span className="font-heading font-extrabold text-base sm:text-2xl gold-gradient-text leading-none block tracking-wider uppercase truncate">
+          <div className="min-w-0 flex-1">
+            <span className="font-heading font-extrabold text-sm sm:text-2xl gold-gradient-text leading-none block tracking-wider uppercase truncate">
               NADIVEDA
             </span>
-            <span className="text-[9px] sm:text-[11px] text-amber-700 tracking-wider font-semibold uppercase block truncate mt-0.5">
+            <span className="text-[8px] sm:text-[11px] text-amber-700 tracking-wider font-semibold uppercase block truncate mt-0.5">
               Vedic Astrology & Bhrigu Nandi Nadi
             </span>
           </div>
