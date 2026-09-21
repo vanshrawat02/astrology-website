@@ -30,7 +30,7 @@ function ContactForm() {
     e.preventDefault();
     const textMessage = `*New Consultation Request*\n\n*Name:* ${fullName}\n*Phone:* ${phone}\n*Email:* ${email}\n*Specialization:* ${service}\n*Birth Details/Notes:* ${birthDetails || "N/A"}`;
     const encodedText = encodeURIComponent(textMessage);
-    const whatsappUrl = `https://wa.me/919311677001?text=${encodedText}`;
+    const whatsappUrl = `https://wa.me/919319506529?text=${encodedText}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -67,7 +67,7 @@ function ContactForm() {
               id="phone"
               type="tel"
               required
-              placeholder="+91 9311677001"
+              placeholder="+91 9319506529"
               className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
@@ -184,21 +184,21 @@ export default function ContactPage() {
                       Phone / Helpline
                     </span>
                     <a
-                      href="tel:+919311677001"
+                      href="tel:+919319506529"
                       className="text-xl font-extrabold text-slate-900 hover:text-gold-600 transition-colors block mb-3 opacity-100"
                     >
-                      +91 9311677001
+                      +91 9319506529
                     </a>
                     <div className="flex flex-wrap gap-2.5">
                       <Button size="sm" className="btn-gold-shimmer text-xs" asChild>
-                        <a href="tel:+919311677001" className="flex items-center gap-1.5">
+                        <a href="tel:+919319506529" className="flex items-center gap-1.5">
                           <Phone className="w-3.5 h-3.5" />
                           <span>Call Now</span>
                         </a>
                       </Button>
                       <Button size="sm" variant="emerald" className="text-xs" asChild>
                         <a
-                          href="https://wa.me/919311677001?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation."
+                          href="https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation."
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-1.5"

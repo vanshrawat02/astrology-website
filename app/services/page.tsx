@@ -183,9 +183,9 @@ export default function ServicesPage() {
                     </Link>
                   </Button>
                   <Button variant="outline" className="border-amber-500/40 text-slate-800 hover:bg-amber-500/10" asChild>
-                    <a href="tel:+919311677001" className="flex items-center gap-2">
+                    <a href="tel:+919319506529" className="flex items-center gap-2">
                       <Phone className="w-4 h-4 text-amber-600" />
-                      <span>Call Now (+91 9311677001)</span>
+                      <span>Call Now (+91 9319506529)</span>
                     </a>
                   </Button>
                 </div>
@@ -305,14 +305,14 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="btn-gold-shimmer" asChild>
-              <a href="tel:+919311677001" className="flex items-center gap-2">
+              <a href="tel:+919319506529" className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-white" />
-                <span>Call Now (+91 9311677001)</span>
+                <span>Call Now (+91 9319506529)</span>
               </a>
             </Button>
             <Button size="lg" variant="emerald" asChild>
               <a
-                href="https://wa.me/919311677001?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation."
+                href="https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"

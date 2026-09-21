@@ -105,30 +105,34 @@ export default function HomePage() {
               className="w-full sm:w-auto px-8 py-6 text-base border-amber-500/40 text-slate-800 hover:bg-amber-500/10 transition-all font-bold"
               asChild
             >
-              <a href="tel:+919311677001" className="flex items-center justify-center gap-2.5">
+              <a href="tel:+919319506529" className="flex items-center justify-center gap-2.5">
                 <Phone className="w-5 h-5 text-amber-600" />
-                <span>Call (+91 9311677001)</span>
+                <span>Call (+91 9319506529)</span>
               </a>
             </Button>
           </div>
 
           {/* HERO QUICK HIGHLIGHTS */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl w-full mx-auto pt-8 border-t border-amber-500/20 text-xs sm:text-sm text-slate-700">
-            <div className="flex items-center justify-center gap-2 glass-card-light p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 max-w-5xl w-full mx-auto pt-8 border-t border-amber-500/20 text-xs sm:text-sm text-slate-700">
+            <div className="flex items-center justify-center gap-2 glass-card-light p-3 sm:p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
               <ShieldCheck className="w-4 h-4 text-gold-500 shrink-0" />
-              <span className="font-semibold">100% Confidential</span>
+              <span className="font-semibold text-center">100% Confidential</span>
             </div>
-            <div className="flex items-center justify-center gap-2 glass-card-light p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
+            <div className="flex items-center justify-center gap-2 glass-card-light p-3 sm:p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
               <Compass className="w-4 h-4 text-gold-500 shrink-0" />
-              <span className="font-semibold">Bhrigu Nandi Nadi</span>
+              <span className="font-semibold text-center">Bhrigu Nandi Nadi</span>
             </div>
-            <div className="flex items-center justify-center gap-2 glass-card-light p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
+            <div className="flex items-center justify-center gap-2 glass-card-light p-3 sm:p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
               <Phone className="w-4 h-4 text-gold-500 shrink-0" />
-              <span className="font-semibold">Audio/Video Call</span>
+              <span className="font-semibold text-center">Audio/Video Call</span>
             </div>
-            <div className="flex items-center justify-center gap-2 glass-card-light p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
+            <div className="flex items-center justify-center gap-2 glass-card-light p-3 sm:p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
               <Tag className="w-4 h-4 text-gold-500 shrink-0" />
-              <span className="font-semibold">Fixed Fee: ₹1,500 INR</span>
+              <span className="font-semibold text-center">Fixed Fee: ₹1,500 INR</span>
+            </div>
+            <div className="col-span-2 sm:col-span-1 flex items-center justify-center gap-2 glass-card-light p-3 sm:p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
+              <Sparkles className="w-4 h-4 text-gold-500 shrink-0" />
+              <span className="font-semibold text-center">Vedic Jyotish Astrology</span>
             </div>
           </div>
 
@@ -344,7 +348,7 @@ export default function HomePage() {
                     </Link>
                   </Button>
                   <Button variant="outline" className="border-amber-500/40 text-slate-800 hover:bg-amber-500/10" asChild>
-                    <a href="tel:+919311677001" className="flex items-center gap-2">
+                    <a href="tel:+919319506529" className="flex items-center gap-2">
                       <Phone className="w-4 h-4 text-amber-600" />
                       <span>Call Astrologer</span>
                     </a>
@@ -441,13 +445,13 @@ export default function HomePage() {
               </Button>
               <Button size="lg" variant="emerald" className="w-full sm:w-auto px-8 py-6 text-base font-bold" asChild>
                 <a
-                  href="https://wa.me/919311677001?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation."
+                  href="https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  <span>WhatsApp (+91 9311677001)</span>
+                  <span>WhatsApp (+91 9319506529)</span>
                 </a>
               </Button>
             </div>

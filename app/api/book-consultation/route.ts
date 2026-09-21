@@ -88,7 +88,7 @@ ${message || "None provided"}
 
     // Format WhatsApp Redirect URL for instant client confirmation fallback
     const whatsappMessage = `*New Booking #${bookingId}*\n\n*Name:* ${fullName}\n*Phone:* ${phone}\n*Email:* ${email}\n*DOB:* ${dob || "N/A"} | *TOB:* ${tob || "N/A"} | *POB:* ${pob || "N/A"}\n*Topic:* ${topic}\n*Preferred Slot:* ${preferredDate || "Any"} (${timeSlot || "Flexible"})\n*Fee:* ${fee}\n\n*Message:* ${message || "N/A"}`;
-    const whatsappUrl = `https://wa.me/919311677001?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/919319506529?text=${encodeURIComponent(whatsappMessage)}`;
 
     return NextResponse.json({
       success: true,

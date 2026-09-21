@@ -50,7 +50,7 @@ export default function FAQPage() {
     {
       question: "How do I pay and book my consultation slot?",
       answer:
-        "You can book directly by filling the contact form on our website or sending a message on WhatsApp (+91 9311677001). We support UPI, Bank Transfer, GPay, PhonePe, and Credit/Debit Cards.",
+        "You can book directly by filling the contact form on our website or sending a message on WhatsApp (+91 9319506529). We support UPI, Bank Transfer, GPay, PhonePe, and Credit/Debit Cards.",
     },
   ];
 
