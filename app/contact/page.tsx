@@ -35,106 +35,108 @@ function ContactForm() {
   };
 
   return (
-    <Card className="glass-card-light p-5 sm:p-10 border border-amber-500/30 shadow-xl">
-      <h2 className="font-heading text-2xl font-bold text-slate-900 mb-2">
-        Schedule Your Consultation
-      </h2>
-      <p className="text-slate-600 text-xs mb-8">
-        Fill in your basic details below to connect directly with our expert consultation team.
-      </p>
-
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid sm:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="fullName" className="block text-xs font-bold text-slate-800 uppercase mb-2">
-              Full Name *
-            </label>
-            <Input
-              id="fullName"
-              type="text"
-              required
-              placeholder="e.g. Ramesh Kumar"
-              className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400"
-              value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
-            />
-          </div>
-          <div>
-            <label htmlFor="phone" className="block text-xs font-bold text-slate-800 uppercase mb-2">
-              Phone / WhatsApp Number *
-            </label>
-            <Input
-              id="phone"
-              type="tel"
-              required
-              placeholder="+91 9319506529"
-              className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-            />
-          </div>
-        </div>
-
-        <div className="grid sm:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="email" className="block text-xs font-bold text-slate-800 uppercase mb-2">
-              Email Address *
-            </label>
-            <Input
-              id="email"
-              type="email"
-              required
-              placeholder="you@example.com"
-              className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-
-          <div>
-            <label htmlFor="service" className="block text-xs font-bold text-slate-800 uppercase mb-2">
-              Select Specialization *
-            </label>
-            <Select
-              id="service"
-              value={service}
-              onChange={(e) => setService(e.target.value)}
-              className="bg-white border-amber-500/30 text-slate-900"
-            >
-              <option value="Horoscope Analysis & Consultation">Horoscope Analysis & Consultation</option>
-              <option value="Marriage & Relationship Compatibility">Marriage & Relationship Compatibility</option>
-              <option value="Career & Business Growth">Career & Business Growth</option>
-              <option value="Child Birth & Family Prospects">Child Birth & Family Prospects</option>
-              <option value="Finance & Wealth Guidance">Finance & Wealth Guidance</option>
-              <option value="Foreign Travels & Relocation">Foreign Travels & Relocation</option>
-            </Select>
-          </div>
-        </div>
-
-        <div>
-          <label htmlFor="birthDetails" className="block text-xs font-bold text-slate-800 uppercase mb-2">
-            Birth Details & Specific Queries (Optional)
-          </label>
-          <Textarea
-            id="birthDetails"
-            rows={4}
-            placeholder="Please enter your Date of Birth, Time of Birth, Place of Birth, and main concerns (e.g. Career, Marriage, Finance)..."
-            className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400"
-            value={birthDetails}
-            onChange={(e) => setBirthDetails(e.target.value)}
-          />
-        </div>
-
-        <Button type="submit" size="lg" className="btn-gold-shimmer w-full text-base font-bold py-6 shadow-xl">
-          <Send className="w-5 h-5 mr-2" />
-          <span>Send Booking Request on WhatsApp</span>
-        </Button>
-
-        <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-2">
-          <ShieldCheck className="w-4 h-4 text-emerald-600" />
-          <span>Your information is strictly private and 100% confidential.</span>
+    <Card className="glass-card-light p-4 sm:p-10 border border-amber-500/30 shadow-xl w-full max-w-full overflow-hidden">
+      <div className="w-full min-w-0">
+        <h2 className="font-heading text-xl sm:text-2xl font-bold text-slate-900 mb-2 leading-tight">
+          Schedule Your Consultation
+        </h2>
+        <p className="text-slate-600 text-xs sm:text-sm mb-6 leading-relaxed">
+          Fill in your basic details below to connect directly with our expert consultation team.
         </p>
-      </form>
+
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 w-full min-w-0">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 min-w-0">
+            <div className="min-w-0">
+              <label htmlFor="fullName" className="block text-xs font-bold text-slate-800 uppercase mb-1.5">
+                Full Name *
+              </label>
+              <Input
+                id="fullName"
+                type="text"
+                required
+                placeholder="e.g. Ramesh Kumar"
+                className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm w-full min-w-0"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+              />
+            </div>
+            <div className="min-w-0">
+              <label htmlFor="phone" className="block text-xs font-bold text-slate-800 uppercase mb-1.5">
+                Phone / WhatsApp Number *
+              </label>
+              <Input
+                id="phone"
+                type="tel"
+                required
+                placeholder="+91 9319506529"
+                className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm w-full min-w-0"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 min-w-0">
+            <div className="min-w-0">
+              <label htmlFor="email" className="block text-xs font-bold text-slate-800 uppercase mb-1.5">
+                Email Address *
+              </label>
+              <Input
+                id="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+                className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm w-full min-w-0"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+
+            <div className="min-w-0">
+              <label htmlFor="service" className="block text-xs font-bold text-slate-800 uppercase mb-1.5">
+                Select Specialization *
+              </label>
+              <Select
+                id="service"
+                value={service}
+                onChange={(e) => setService(e.target.value)}
+                className="bg-white border-amber-500/30 text-slate-900 text-xs sm:text-sm w-full min-w-0 truncate"
+              >
+                <option value="Horoscope Analysis & Consultation">Horoscope Analysis & Consultation</option>
+                <option value="Marriage & Relationship Compatibility">Marriage & Relationship Compatibility</option>
+                <option value="Career & Business Growth">Career & Business Growth</option>
+                <option value="Child Birth & Family Prospects">Child Birth & Family Prospects</option>
+                <option value="Finance & Wealth Guidance">Finance & Wealth Guidance</option>
+                <option value="Foreign Travels & Relocation">Foreign Travels & Relocation</option>
+              </Select>
+            </div>
+          </div>
+
+          <div className="min-w-0">
+            <label htmlFor="birthDetails" className="block text-xs font-bold text-slate-800 uppercase mb-1.5">
+              Birth Details & Specific Queries (Optional)
+            </label>
+            <Textarea
+              id="birthDetails"
+              rows={4}
+              placeholder="Please enter your Date of Birth, Time of Birth, Place of Birth, and main concerns (e.g. Career, Marriage, Finance)..."
+              className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm w-full min-w-0"
+              value={birthDetails}
+              onChange={(e) => setBirthDetails(e.target.value)}
+            />
+          </div>
+
+          <Button type="submit" size="lg" className="btn-gold-shimmer w-full text-xs sm:text-base font-bold py-5 sm:py-6 shadow-xl">
+            <Send className="w-4 h-4 sm:w-5 sm:h-5 mr-2 shrink-0" />
+            <span className="truncate">Send Booking Request on WhatsApp</span>
+          </Button>
+
+          <p className="text-[11px] sm:text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+            <span>Your information is strictly private and 100% confidential.</span>
+          </p>
+        </form>
+      </div>
     </Card>
   );
 }
