@@ -20,7 +20,7 @@ export function Header() {
   const pathname = usePathname();
 
   const businessEmail = "secretsofastrology2dh@gmail.com";
-  const businessPhone = "+91 9319506529";
+  const businessPhone = "+91 9311677001";
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-amber-500/20 shadow-sm transition-all duration-300">
@@ -41,7 +41,7 @@ export function Header() {
               <span className="truncate">{businessEmail}</span>
             </a>
             <a
-              href="tel:+919319506529"
+              href="tel:+919311677001"
               className="flex items-center gap-1 text-slate-900 hover:text-amber-700 transition-colors font-bold shrink-0"
             >
               <Phone className="w-3.5 h-3.5 text-amber-600 shrink-0" />

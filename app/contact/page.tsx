@@ -30,7 +30,7 @@ function ContactForm() {
     e.preventDefault();
     const textMessage = `*New Consultation Request*\n\n*Name:* ${fullName}\n*Phone:* ${phone}\n*Email:* ${email}\n*Specialization:* ${service}\n*Birth Details/Notes:* ${birthDetails || "N/A"}`;
     const encodedText = encodeURIComponent(textMessage);
-    const whatsappUrl = `https://wa.me/919319506529?text=${encodedText}`;
+    const whatsappUrl = `https://wa.me/919311677001?text=${encodedText}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -67,7 +67,7 @@ function ContactForm() {
               id="phone"
               type="tel"
               required
-              placeholder="+91 9319506529"
+              placeholder="+91 9311677001"
               className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
@@ -84,7 +84,7 @@ function ContactForm() {
               id="email"
               type="email"
               required
-              placeholder="yourname@gmail.com"
+              placeholder="you@example.com"
               className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -93,55 +93,47 @@ function ContactForm() {
 
           <div>
             <label htmlFor="service" className="block text-xs font-bold text-slate-800 uppercase mb-2">
-              Selected Specialization *
+              Select Specialization *
             </label>
             <Select
               id="service"
               value={service}
               onChange={(e) => setService(e.target.value)}
               className="bg-white border-amber-500/30 text-slate-900"
-              required
             >
-              <option value="Horoscope Analysis & Consultation">
-                Horoscope Analysis & Consultation
-              </option>
-              <option value="Marriage & Relationship Compatibility">
-                Marriage & Relationship Compatibility
-              </option>
-              <option value="Career & Business Growth">
-                Career & Business Growth
-              </option>
-              <option value="Child Birth & Family Prospects">
-                Child Birth & Family Prospects
-              </option>
-              <option value="Finance & Wealth Guidance">
-                Finance & Wealth Guidance
-              </option>
-              <option value="Foreign Travels & Relocation">
-                Foreign Travels & Relocation
-              </option>
+              <option value="Horoscope Analysis & Consultation">Horoscope Analysis & Consultation</option>
+              <option value="Marriage & Relationship Compatibility">Marriage & Relationship Compatibility</option>
+              <option value="Career & Business Growth">Career & Business Growth</option>
+              <option value="Child Birth & Family Prospects">Child Birth & Family Prospects</option>
+              <option value="Finance & Wealth Guidance">Finance & Wealth Guidance</option>
+              <option value="Foreign Travels & Relocation">Foreign Travels & Relocation</option>
             </Select>
           </div>
         </div>
 
         <div>
           <label htmlFor="birthDetails" className="block text-xs font-bold text-slate-800 uppercase mb-2">
-            Birth Details / Query Notes (Optional)
+            Birth Details & Specific Queries (Optional)
           </label>
           <Textarea
             id="birthDetails"
             rows={4}
-            placeholder="Enter Date of Birth, Time, Place of Birth or specific questions..."
+            placeholder="Please enter your Date of Birth, Time of Birth, Place of Birth, and main concerns (e.g. Career, Marriage, Finance)..."
             className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400"
             value={birthDetails}
             onChange={(e) => setBirthDetails(e.target.value)}
           />
         </div>
 
-        <Button type="submit" className="btn-gold-shimmer w-full py-6 text-base">
-          <Send className="w-5 h-5 mr-2 text-white" />
-          <span>Confirm & Connect via WhatsApp</span>
+        <Button type="submit" size="lg" className="btn-gold-shimmer w-full text-base font-bold py-6 shadow-xl">
+          <Send className="w-5 h-5 mr-2" />
+          <span>Send Booking Request on WhatsApp</span>
         </Button>
+
+        <p className="text-xs text-center text-slate-500 flex items-center justify-center gap-1.5 pt-2">
+          <ShieldCheck className="w-4 h-4 text-emerald-600" />
+          <span>Your information is strictly private and 100% confidential.</span>
+        </p>
       </form>
     </Card>
   );
@@ -150,71 +142,71 @@ function ContactForm() {
 export default function ContactPage() {
   return (
     <div className="bg-white text-slate-900 min-h-screen">
-      {/* PAGE BANNER */}
-      <section className="bg-light-pattern py-16 border-b border-amber-500/10 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* PAGE HEADER */}
+      <section className="bg-light-pattern py-16 border-b border-amber-500/10 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Badge variant="default" className="mb-2">
-            Direct Access
+            1-on-1 Consultation
           </Badge>
           <h1 className="font-heading text-4xl sm:text-5xl font-extrabold text-slate-900 mb-4">
-            Contact & Book <span className="gold-gradient-text">Consultation</span>
+            Contact & <span className="gold-gradient-text">Book Appointment</span>
           </h1>
           <p className="text-slate-600 text-base max-w-2xl mx-auto">
-            Schedule your personalized session with certified experts in Vedic Astrology & Bhrigu Nandi Nadi.
+            Schedule your personalized Vedic & Bhrigu Nandi Nadi astrological consultation via Audio/Video Call, WhatsApp, or Email.
           </p>
         </div>
       </section>
 
-      {/* CONTACT INFO & FORM SECTION */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12">
-            {/* Contact Info Left (5 cols) */}
-            <div className="lg:col-span-5 space-y-8">
-              <div>
-                <h2 className="font-heading text-2xl font-bold text-slate-900 mb-3">Get In Touch</h2>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  Have questions or ready to book your consultation? Reach out via Phone, WhatsApp, or Email.
-                </p>
-              </div>
+      <section className="py-20 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          {/* LEFT FORM */}
+          <div className="lg:col-span-7">
+            <Suspense fallback={<div className="p-8 text-center text-slate-600 font-medium">Loading Booking Form...</div>}>
+              <ContactForm />
+            </Suspense>
+          </div>
 
-              {/* Contact Cards */}
-              <div className="space-y-4">
-                {/* Phone Card */}
-                <div className="glass-card-light rounded-2xl p-6 border border-amber-500/30">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-600 shrink-0">
-                      <Phone className="w-6 h-6" />
-                    </div>
-                    <div className="flex-1">
-                      <span className="text-xs uppercase font-bold text-amber-700 tracking-wider block mb-1">
-                        Phone / Helpline
-                      </span>
-                      <a
-                        href="tel:+919319506529"
-                        className="text-xl font-extrabold text-slate-900 hover:text-gold-600 transition-colors block mb-3 opacity-100"
-                      >
-                        +91 9319506529
-                      </a>
-                      <div className="flex flex-wrap gap-2.5">
-                        <Button size="sm" className="btn-gold-shimmer text-xs" asChild>
-                          <a href="tel:+919319506529" className="flex items-center gap-1.5">
-                            <Phone className="w-3.5 h-3.5" />
-                            <span>Call Now</span>
-                          </a>
-                        </Button>
-                        <Button size="sm" variant="emerald" className="text-xs" asChild>
-                          <a
-                            href="https://wa.me/919319506529?text=Hi%20Vedic%20Astrology,%20I%20would%20like%20to%20book%20a%20consultation."
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1.5"
-                          >
-                            <MessageCircle className="w-3.5 h-3.5" />
-                            <span>WhatsApp</span>
-                          </a>
-                        </Button>
-                      </div>
+          {/* RIGHT INFO CARDS */}
+          <div className="lg:col-span-5 space-y-6">
+            <Card className="glass-card-light p-8 border border-amber-500/30 shadow-lg">
+              <h3 className="font-heading text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+                Direct Communication Channels
+              </h3>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-600 flex items-center justify-center shrink-0 shadow-sm">
+                    <Phone className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <span className="text-xs uppercase font-bold text-amber-700 tracking-wider block mb-1">
+                      Phone / Helpline
+                    </span>
+                    <a
+                      href="tel:+919311677001"
+                      className="text-xl font-extrabold text-slate-900 hover:text-gold-600 transition-colors block mb-3 opacity-100"
+                    >
+                      +91 9311677001
+                    </a>
+                    <div className="flex flex-wrap gap-2.5">
+                      <Button size="sm" className="btn-gold-shimmer text-xs" asChild>
+                        <a href="tel:+919311677001" className="flex items-center gap-1.5">
+                          <Phone className="w-3.5 h-3.5" />
+                          <span>Call Now</span>
+                        </a>
+                      </Button>
+                      <Button size="sm" variant="emerald" className="text-xs" asChild>
+                        <a
+                          href="https://wa.me/919311677001?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5"
+                        >
+                          <MessageCircle className="w-3.5 h-3.5" />
+                          <span>WhatsApp</span>
+                        </a>
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -247,7 +239,7 @@ export default function ContactPage() {
               </div>
 
               {/* Hours */}
-              <div className="glass-card-light rounded-2xl p-6 border border-amber-500/20 text-xs text-slate-700 space-y-2">
+              <div className="glass-card-light rounded-2xl p-6 border border-amber-500/20 text-xs text-slate-700 space-y-2 mt-6">
                 <div className="flex items-center justify-between font-bold text-slate-900 border-b border-amber-500/20 pb-2 mb-2">
                   <span className="flex items-center gap-2">
                     <Clock className="w-4 h-4 text-amber-600" /> Consultation Hours
@@ -261,14 +253,7 @@ export default function ContactPage() {
                   <span>Sunday:</span> <strong>10:00 AM – 5:00 PM IST</strong>
                 </p>
               </div>
-            </div>
-
-            {/* Consultation Form Right (7 cols) */}
-            <div className="lg:col-span-7">
-              <Suspense fallback={<Card className="glass-card-light p-8 text-center text-slate-500">Loading form...</Card>}>
-                <ContactForm />
-              </Suspense>
-            </div>
+            </Card>
           </div>
         </div>
       </section>

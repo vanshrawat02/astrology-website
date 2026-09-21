@@ -180,9 +180,9 @@ export default function WhyUsPage() {
                     </Link>
                   </Button>
                   <Button size="lg" variant="outline" className="border-amber-500/40 text-slate-800 hover:bg-amber-500/10" asChild>
-                    <a href="tel:+919319506529" className="flex items-center gap-2">
+                    <a href="tel:+919311677001" className="flex items-center gap-2">
                       <Phone className="w-4 h-4 text-amber-600" />
-                      <span>Call +91 9319506529</span>
+                      <span>Call +91 9311677001</span>
                     </a>
                   </Button>
                 </div>

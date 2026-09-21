@@ -99,7 +99,7 @@ export function BookingModal({ isOpen, onClose, bookingData }: BookingModalProps
           <Button variant="emerald" size="lg" className="w-full text-sm font-bold py-6 shadow-lg" asChild>
             <a href={bookingData.whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
               <MessageCircle className="w-5 h-5" />
-              <span>Confirm Slot on WhatsApp (+91 9319506529)</span>
+              <span>Confirm Slot on WhatsApp (+91 9311677001)</span>
             </a>
           </Button>
 
