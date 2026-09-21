@@ -222,44 +222,46 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {specializations.map((service) => {
               const Icon = service.icon;
               return (
-                <Card key={service.id} className="glass-card-light flex flex-col justify-between hover:border-amber-500/50 shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <div>
-                    <CardHeader>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-gold-600 to-amber-500 flex items-center justify-center text-white shadow-md">
-                          <Icon className="w-6 h-6" />
+                <div key={service.id} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc((100%-4rem)/3)] flex">
+                  <Card className="glass-card-light flex flex-col justify-between hover:border-amber-500/50 shadow-lg transition-all duration-300 hover:-translate-y-1 w-full">
+                    <div>
+                      <CardHeader>
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-gold-600 to-amber-500 flex items-center justify-center text-white shadow-md">
+                            <Icon className="w-6 h-6" />
+                          </div>
+                          <Badge className="bg-amber-100 border border-amber-500/30 text-amber-800 text-[11px] font-bold">
+                            {service.badge}
+                          </Badge>
                         </div>
-                        <Badge className="bg-amber-100 border border-amber-500/30 text-amber-800 text-[11px] font-bold">
-                          {service.badge}
-                        </Badge>
-                      </div>
-                      <CardTitle className="text-xl font-bold text-slate-900">{service.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <CardDescription className="text-slate-600 text-sm leading-relaxed">{service.description}</CardDescription>
-                      <ul className="space-y-2 pt-3 border-t border-amber-500/15">
-                        {service.highlights.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2 text-xs text-slate-700">
-                            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </div>
-                  <div className="p-6 pt-0">
-                    <Button variant="default" className="btn-gold-shimmer w-full mt-4" asChild>
-                      <Link href={`/contact?service=${encodeURIComponent(service.title)}`}>
-                        <span>Book Consultation</span>
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
-                    </Button>
-                  </div>
-                </Card>
+                        <CardTitle className="text-xl font-bold text-slate-900">{service.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                        <CardDescription className="text-slate-600 text-sm leading-relaxed">{service.description}</CardDescription>
+                        <ul className="space-y-2 pt-3 border-t border-amber-500/15">
+                          {service.highlights.map((item, i) => (
+                            <li key={i} className="flex items-start gap-2 text-xs text-slate-700">
+                              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </div>
+                    <div className="p-6 pt-0">
+                      <Button variant="default" className="btn-gold-shimmer w-full mt-4" asChild>
+                        <Link href={`/contact?service=${encodeURIComponent(service.title)}`}>
+                          <span>Book Consultation</span>
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </Card>
+                </div>
               );
             })}
           </div>

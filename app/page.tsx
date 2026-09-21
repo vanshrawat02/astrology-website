@@ -386,40 +386,41 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {specializations.map((item, index) => {
               const Icon = item.icon;
               return (
-                <Card
-                  key={index}
-                  className="glass-card-light flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5"
-                >
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-gold-600 to-amber-500 flex items-center justify-center text-white shadow-md">
-                        <Icon className="w-6 h-6" />
+                <div key={index} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc((100%-4rem)/3)] flex">
+                  <Card
+                    className="glass-card-light flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 w-full"
+                  >
+                    <CardHeader>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-gold-600 to-amber-500 flex items-center justify-center text-white shadow-md">
+                          <Icon className="w-6 h-6" />
+                        </div>
+                        <Badge className="bg-amber-100 border border-amber-500/30 text-amber-800 text-[11px] font-bold">
+                          {item.badge}
+                        </Badge>
                       </div>
-                      <Badge className="bg-amber-100 border border-amber-500/30 text-amber-800 text-[11px] font-bold">
-                        {item.badge}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-xl font-bold text-slate-900">
-                      {item.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <CardDescription className="text-slate-600 text-sm leading-relaxed">
-                      {item.description}
-                    </CardDescription>
-                    <Link
-                      href={`/contact?service=${encodeURIComponent(item.title)}`}
-                      className="inline-flex items-center gap-2 text-gold-600 font-bold text-sm hover:gap-3 transition-all"
-                    >
-                      <span>Book Consultation</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </CardContent>
-                </Card>
+                      <CardTitle className="text-xl font-bold text-slate-900">
+                        {item.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <CardDescription className="text-slate-600 text-sm leading-relaxed">
+                        {item.description}
+                      </CardDescription>
+                      <Link
+                        href={`/contact?service=${encodeURIComponent(item.title)}`}
+                        className="inline-flex items-center gap-2 text-gold-600 font-bold text-sm hover:gap-3 transition-all"
+                      >
+                        <span>Book Consultation</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </CardContent>
+                  </Card>
+                </div>
               );
             })}
           </div>
