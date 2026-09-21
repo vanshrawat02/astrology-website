@@ -85,7 +85,7 @@ function ContactForm() {
                 id="email"
                 type="email"
                 required
-                placeholder="you@example.com"
+                placeholder="yourname@gmail.com"
                 className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm w-full min-w-0"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

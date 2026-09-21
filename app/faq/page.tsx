@@ -94,7 +94,7 @@ export default function FAQPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button variant="emerald" asChild>
                 <a
-                  href="https://wa.me/919999999999?text=Hi%20Cosmic%20Guidance,%20I%20have%20a%20question%20before%20booking."
+                  href="https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20have%20a%20question%20before%20booking."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
