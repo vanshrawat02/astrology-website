@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Sparkles, Mail, Phone, Calendar } from "lucide-react";
+import { Menu, X, Sparkles, Mail, Phone, Calendar, ChevronDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { services } from "@/lib/services";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -80,18 +81,56 @@ export function Header() {
           <nav className="flex items-center gap-8 text-sm font-semibold text-slate-700">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
+              const linkClass = isActive
+                ? "text-gold-500 border-b-2 border-gold-500 pb-1 font-bold"
+                : "hover:text-gold-500 transition-colors";
+
+              if (link.href !== "/services") {
+                return (
+                  <Link key={link.href} href={link.href} className={linkClass}>
+                    {link.label}
+                  </Link>
+                );
+              }
+
               return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={
-                    isActive
-                      ? "text-gold-500 border-b-2 border-gold-500 pb-1 font-bold"
-                      : "hover:text-gold-500 transition-colors"
-                  }
-                >
-                  {link.label}
-                </Link>
+                <div key={link.href} className="relative group">
+                  <Link href={link.href} className={`${linkClass} inline-flex items-center gap-1`}>
+                    {link.label}
+                    <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />
+                  </Link>
+
+                  {/* Services dropdown (pt-4 bridges the gap so hover isn't lost) */}
+                  <div className="invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 w-[22rem]">
+                    <div className="bg-white rounded-2xl border border-amber-500/25 shadow-xl p-2">
+                      {services.map((service) => {
+                        const Icon = service.icon;
+                        return (
+                          <Link
+                            key={service.id}
+                            href={`/services#${service.id}`}
+                            className="flex items-start gap-3 rounded-xl px-3 py-2.5 hover:bg-amber-50 transition-colors"
+                          >
+                            <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-gold-600 to-amber-500 flex items-center justify-center text-white shrink-0">
+                              <Icon className="w-4 h-4" />
+                            </span>
+                            <span className="min-w-0">
+                              <span className="block text-sm font-bold text-slate-900">{service.shortTitle}</span>
+                              <span className="block text-xs font-normal text-slate-500 truncate">{service.tagline}</span>
+                            </span>
+                          </Link>
+                        );
+                      })}
+                      <Link
+                        href="/services"
+                        className="mt-1 flex items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold text-amber-800 bg-amber-50 hover:bg-amber-100 transition-colors"
+                      >
+                        View All Services
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               );
             })}
           </nav>
@@ -116,7 +155,7 @@ export function Header() {
 
       {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-amber-500/20 px-6 pt-4 pb-6 space-y-4 shadow-lg">
+        <div className="lg:hidden bg-white border-b border-amber-500/20 px-6 pt-4 pb-6 space-y-4 shadow-lg max-h-[calc(100dvh-5rem)] overflow-y-auto">
           <nav className="space-y-3">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -136,6 +175,25 @@ export function Header() {
               );
             })}
           </nav>
+          <div className="pt-3 border-t border-amber-500/15">
+            <span className="block text-[11px] font-bold text-amber-800 uppercase tracking-wider mb-2">Our Services</span>
+            <div className="grid grid-cols-2 gap-2">
+              {services.map((service) => {
+                const Icon = service.icon;
+                return (
+                  <Link
+                    key={service.id}
+                    href={`/services#${service.id}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-2 rounded-lg border border-amber-500/20 bg-amber-50/60 px-2.5 py-2 text-xs font-semibold text-slate-800 hover:bg-amber-100"
+                  >
+                    <Icon className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                    <span className="leading-tight">{service.shortTitle}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
           <div className="pt-3 border-t border-amber-500/15 space-y-3">
             <div className="text-xs text-slate-600 space-y-1">
               <p className="flex items-center gap-2">
