@@ -59,12 +59,12 @@ export function Header() {
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-14 sm:h-20 flex items-center justify-between gap-2">
         {/* Logo & Business Name */}
-        <Link href="/" className="flex items-center gap-2 group min-w-0 flex-1">
-          <div className="relative w-8 h-8 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-amber-500/10 border border-amber-500/30 shadow-md group-hover:scale-105 transition-transform duration-300 flex items-center justify-center shrink-0 p-0.5 sm:p-1">
+        <Link href="/" className="flex items-center gap-2 sm:gap-3 group min-w-0 flex-1">
+          <div className="relative h-9 sm:h-12 md:h-14 w-auto rounded-lg overflow-hidden bg-white border border-amber-500/30 shadow-sm group-hover:scale-105 transition-transform duration-300 flex items-center justify-center shrink-0 p-0.5">
             <img
-              src="/logo.png"
-              alt="Nadiveda Logo"
-              className="w-full h-full object-contain"
+              src="/jdm-logo.jpg"
+              alt="Jyotisham - Acharya Deepak Mehta Astrologer"
+              className="h-full w-auto object-contain rounded"
             />
           </div>
           <div className="min-w-0 flex-1">
