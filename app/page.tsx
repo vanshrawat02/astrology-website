@@ -151,7 +151,7 @@ export default function HomePage() {
               Meet <span className="gold-gradient-text">Mr. Deepak Mehta</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-              Welcome. I am <strong>Mr. Deepak Mehta</strong>, a certified expert in traditional Vedic Astrology and Bhrigu Nandi Nadi techniques, dedicated to offering authentic, research-backed insights to help you navigate life&apos;s pivotal decisions.
+              Welcome. I am <strong>Deepak Mehta</strong>, a certified expert in traditional Vedic Astrology and Bhrigu Nandi Nadi techniques, dedicated to offering authentic, research-backed insights to help you navigate life&apos;s pivotal decisions.
             </p>
           </div>
 

@@ -140,7 +140,7 @@ export default function WhyUsPage() {
                   Meet Mr. Deepak Mehta
                 </h2>
                 <p className="text-slate-600 leading-relaxed text-base">
-                  Welcome. I am <strong>Mr. Deepak Mehta</strong>, a certified expert in traditional Vedic Astrology and Bhrigu Nandi Nadi techniques, dedicated to offering authentic, research-backed insights to help you navigate life&apos;s pivotal decisions.
+                  Welcome. I am <strong>Deepak Mehta</strong>, a certified expert in traditional Vedic Astrology and Bhrigu Nandi Nadi techniques, dedicated to offering authentic, research-backed insights to help you navigate life&apos;s pivotal decisions.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 text-xs font-semibold text-slate-800">
                   <div className="flex items-start gap-2.5 p-3 rounded-xl bg-amber-50/60 border border-amber-500/20">

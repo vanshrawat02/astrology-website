@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { Phone, Mail, MessageCircle, Clock, Send, ShieldCheck, CheckCircle2, Youtube } from "lucide-react";
+import { Phone, Mail, MessageCircle, Clock, Send, ShieldCheck, CheckCircle2, Youtube, Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -18,7 +18,10 @@ function ContactForm() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [service, setService] = useState(preselectedService);
-  const [birthDetails, setBirthDetails] = useState("");
+  const [dob, setDob] = useState("");
+  const [tob, setTob] = useState("");
+  const [pob, setPob] = useState("");
+  const [queries, setQueries] = useState("");
 
   useEffect(() => {
     if (searchParams.get("service")) {
@@ -28,7 +31,7 @@ function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const textMessage = `*New Consultation Request*\n\n*Name:* ${fullName}\n*Phone:* ${phone}\n*Email:* ${email}\n*Specialization:* ${service}\n*Birth Details/Notes:* ${birthDetails || "N/A"}`;
+    const textMessage = `*New Consultation Request*\n\n*Name:* ${fullName}\n*Phone:* ${phone}\n*Email:* ${email}\n*Specialization:* ${service}\n*Date of Birth:* ${dob || "N/A"}\n*Time of Birth (24h Clock):* ${tob || "N/A"}\n*Place of Birth:* ${pob || "N/A"}\n*Specific Queries:* ${queries || "N/A"}`;
     const encodedText = encodeURIComponent(textMessage);
     const whatsappUrl = `https://wa.me/919319506529?text=${encodedText}`;
     window.open(whatsappUrl, "_blank");
@@ -112,17 +115,71 @@ function ContactForm() {
             </div>
           </div>
 
+          {/* BIRTH DATE & BIRTH TIME (CALENDAR & 24H CLOCK) */}
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 min-w-0">
+            <div className="min-w-0">
+              <label htmlFor="dob" className="flex items-center gap-1.5 text-xs font-bold text-slate-800 uppercase mb-1.5">
+                <Calendar className="w-3.5 h-3.5 text-amber-600" />
+                <span>Date of Birth *</span>
+              </label>
+              <Input
+                id="dob"
+                type="date"
+                required
+                className="bg-white border-amber-500/30 text-slate-900 text-xs sm:text-sm w-full min-w-0 cursor-pointer"
+                value={dob}
+                onChange={(e) => setDob(e.target.value)}
+              />
+              <span className="text-[10px] text-slate-500 block mt-1">Select Day, Month, and Year from Calendar</span>
+            </div>
+
+            <div className="min-w-0">
+              <label htmlFor="tob" className="flex items-center gap-1.5 text-xs font-bold text-slate-800 uppercase mb-1.5">
+                <Clock className="w-3.5 h-3.5 text-amber-600" />
+                <span>Time of Birth (24-Hour Clock) *</span>
+              </label>
+              <Input
+                id="tob"
+                type="time"
+                step="60"
+                required
+                className="bg-white border-amber-500/30 text-slate-900 text-xs sm:text-sm w-full min-w-0 cursor-pointer"
+                value={tob}
+                onChange={(e) => setTob(e.target.value)}
+              />
+              <span className="text-[10px] text-slate-500 block mt-1">24-Hour Format (e.g. 14:30 for 2:30 PM)</span>
+            </div>
+          </div>
+
+          {/* PLACE OF BIRTH */}
           <div className="min-w-0">
-            <label htmlFor="birthDetails" className="block text-xs font-bold text-slate-800 uppercase mb-1.5">
-              Birth Details & Specific Queries (Optional)
+            <label htmlFor="pob" className="flex items-center gap-1.5 text-xs font-bold text-slate-800 uppercase mb-1.5">
+              <MapPin className="w-3.5 h-3.5 text-amber-600" />
+              <span>Place of Birth (City, State / Country) *</span>
+            </label>
+            <Input
+              id="pob"
+              type="text"
+              required
+              placeholder="e.g. New Delhi, Delhi, India"
+              className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm w-full min-w-0"
+              value={pob}
+              onChange={(e) => setPob(e.target.value)}
+            />
+          </div>
+
+          {/* SPECIFIC QUERIES */}
+          <div className="min-w-0">
+            <label htmlFor="queries" className="block text-xs font-bold text-slate-800 uppercase mb-1.5">
+              Specific Queries & Life Concerns (Optional)
             </label>
             <Textarea
-              id="birthDetails"
-              rows={4}
-              placeholder="Please enter your Date of Birth, Time of Birth, Place of Birth, and main concerns (e.g. Career, Marriage, Finance)..."
+              id="queries"
+              rows={3}
+              placeholder="Mention any specific concerns (e.g., Marriage timing, Career growth, Health, Wealth remedies)..."
               className="bg-white border-amber-500/30 text-slate-900 placeholder:text-slate-400 text-xs sm:text-sm w-full min-w-0"
-              value={birthDetails}
-              onChange={(e) => setBirthDetails(e.target.value)}
+              value={queries}
+              onChange={(e) => setQueries(e.target.value)}
             />
           </div>
 
