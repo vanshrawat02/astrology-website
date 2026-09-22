@@ -18,8 +18,13 @@ function ContactForm() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [service, setService] = useState(preselectedService);
-  const [dob, setDob] = useState("");
-  const [tob, setTob] = useState("");
+  const [dobDay, setDobDay] = useState("02");
+  const [dobMonth, setDobMonth] = useState("09");
+  const [dobYear, setDobYear] = useState("2004");
+
+  const [tobHour, setTobHour] = useState("14");
+  const [tobMinute, setTobMinute] = useState("30");
+
   const [pob, setPob] = useState("");
   const [queries, setQueries] = useState("");
 
@@ -29,9 +34,50 @@ function ContactForm() {
     }
   }, [searchParams]);
 
+  const getFormattedDobInfo = (d: string, m: string, y: string) => {
+    if (!d || !m || !y) return null;
+    const yearNum = parseInt(y, 10);
+    const monthNum = parseInt(m, 10) - 1;
+    const dayNum = parseInt(d, 10);
+    if (isNaN(yearNum) || isNaN(monthNum) || isNaN(dayNum)) return null;
+    const dateObj = new Date(yearNum, monthNum, dayNum);
+    if (dateObj.getMonth() !== monthNum) return null;
+    const monthNames = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    const weekday = dateObj.toLocaleDateString("en-US", { weekday: "long" });
+    const formattedDay = dayNum.toString().padStart(2, "0");
+    const monthName = monthNames[monthNum];
+    return {
+      formattedDate: `${formattedDay} ${monthName} ${yearNum}`,
+      weekday: weekday,
+      fullText: `${formattedDay} ${monthName} ${yearNum} (${weekday})`,
+    };
+  };
+
+  const getFormattedTobInfo = (h: string, m: string) => {
+    if (!h || !m) return null;
+    const hourNum = parseInt(h, 10);
+    const minNum = parseInt(m, 10);
+    if (isNaN(hourNum) || isNaN(minNum)) return null;
+    const formattedHour = hourNum.toString().padStart(2, "0");
+    const formattedMin = minNum.toString().padStart(2, "0");
+    const period = hourNum >= 12 ? "PM" : "AM";
+    const hour12 = hourNum % 12 === 0 ? 12 : hourNum % 12;
+    return {
+      time24: `${formattedHour}:${formattedMin}`,
+      time12: `${hour12}:${formattedMin} ${period}`,
+      fullText: `${formattedHour}:${formattedMin} (${hour12}:${formattedMin} ${period})`,
+    };
+  };
+
+  const dobInfo = getFormattedDobInfo(dobDay, dobMonth, dobYear);
+  const tobInfo = getFormattedTobInfo(tobHour, tobMinute);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const textMessage = `*New Consultation Request*\n\n*Name:* ${fullName}\n*Phone:* ${phone}\n*Email:* ${email}\n*Specialization:* ${service}\n*Date of Birth:* ${dob || "N/A"}\n*Time of Birth (24h Clock):* ${tob || "N/A"}\n*Place of Birth:* ${pob || "N/A"}\n*Specific Queries:* ${queries || "N/A"}`;
+    const textMessage = `*New Consultation Request*\n\n*Name:* ${fullName}\n*Phone:* ${phone}\n*Email:* ${email}\n*Specialization:* ${service}\n*Date of Birth:* ${dobInfo ? dobInfo.fullText : "N/A"}\n*Time of Birth (24h Clock):* ${tobInfo ? tobInfo.fullText : "N/A"}\n*Place of Birth:* ${pob || "N/A"}\n*Specific Queries:* ${queries || "N/A"}`;
     const encodedText = encodeURIComponent(textMessage);
     const whatsappUrl = `https://wa.me/919319506529?text=${encodedText}`;
     window.open(whatsappUrl, "_blank");
@@ -115,40 +161,139 @@ function ContactForm() {
             </div>
           </div>
 
-          {/* BIRTH DATE & BIRTH TIME (CALENDAR & 24H CLOCK) */}
-          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 min-w-0">
-            <div className="min-w-0">
-              <label htmlFor="dob" className="flex items-center gap-1.5 text-xs font-bold text-slate-800 uppercase mb-1.5">
-                <Calendar className="w-3.5 h-3.5 text-amber-600" />
+          {/* DATE OF BIRTH SELECTOR (SMOOTH DAY / MONTH / YEAR) */}
+          <div className="min-w-0 p-4 rounded-2xl bg-amber-50/50 border border-amber-500/30 space-y-3">
+            <div className="flex items-center justify-between">
+              <label className="flex items-center gap-1.5 text-xs font-bold text-slate-900 uppercase tracking-wider">
+                <Calendar className="w-4 h-4 text-amber-600" />
                 <span>Date of Birth *</span>
               </label>
-              <Input
-                id="dob"
-                type="date"
-                required
-                className="bg-white border-amber-500/30 text-slate-900 text-xs sm:text-sm w-full min-w-0 cursor-pointer"
-                value={dob}
-                onChange={(e) => setDob(e.target.value)}
-              />
-              <span className="text-[10px] text-slate-500 block mt-1">Select Day, Month, and Year from Calendar</span>
+              {dobInfo && (
+                <Badge className="bg-amber-100 border border-amber-400 text-amber-900 text-[11px] font-bold">
+                  {dobInfo.weekday}
+                </Badge>
+              )}
             </div>
 
-            <div className="min-w-0">
-              <label htmlFor="tob" className="flex items-center gap-1.5 text-xs font-bold text-slate-800 uppercase mb-1.5">
-                <Clock className="w-3.5 h-3.5 text-amber-600" />
+            <div className="grid grid-cols-3 gap-2 sm:gap-3">
+              {/* DAY */}
+              <div>
+                <span className="text-[10px] font-bold text-slate-500 uppercase block mb-1">Day</span>
+                <Select
+                  value={dobDay}
+                  onChange={(e) => setDobDay(e.target.value)}
+                  className="bg-white border-amber-500/30 text-slate-900 text-xs sm:text-sm font-semibold w-full"
+                >
+                  {Array.from({ length: 31 }, (_, i) => {
+                    const val = (i + 1).toString().padStart(2, "0");
+                    return <option key={val} value={val}>{val}</option>;
+                  })}
+                </Select>
+              </div>
+
+              {/* MONTH */}
+              <div>
+                <span className="text-[10px] font-bold text-slate-500 uppercase block mb-1">Month</span>
+                <Select
+                  value={dobMonth}
+                  onChange={(e) => setDobMonth(e.target.value)}
+                  className="bg-white border-amber-500/30 text-slate-900 text-xs sm:text-sm font-semibold w-full truncate"
+                >
+                  <option value="01">Jan (01)</option>
+                  <option value="02">Feb (02)</option>
+                  <option value="03">Mar (03)</option>
+                  <option value="04">Apr (04)</option>
+                  <option value="05">May (05)</option>
+                  <option value="06">Jun (06)</option>
+                  <option value="07">Jul (07)</option>
+                  <option value="08">Aug (08)</option>
+                  <option value="09">Sep (09)</option>
+                  <option value="10">Oct (10)</option>
+                  <option value="11">Nov (11)</option>
+                  <option value="12">Dec (12)</option>
+                </Select>
+              </div>
+
+              {/* YEAR */}
+              <div>
+                <span className="text-[10px] font-bold text-slate-500 uppercase block mb-1">Year</span>
+                <Select
+                  value={dobYear}
+                  onChange={(e) => setDobYear(e.target.value)}
+                  className="bg-white border-amber-500/30 text-slate-900 text-xs sm:text-sm font-semibold w-full"
+                >
+                  {Array.from({ length: 87 }, (_, i) => {
+                    const yr = (2026 - i).toString();
+                    return <option key={yr} value={yr}>{yr}</option>;
+                  })}
+                </Select>
+              </div>
+            </div>
+
+            {dobInfo ? (
+              <div className="p-2.5 rounded-xl bg-amber-100/70 border border-amber-500/30 text-amber-900 text-xs font-bold flex items-center justify-between">
+                <span>Selected Date: {dobInfo.formattedDate}</span>
+                <span className="px-2.5 py-0.5 rounded-md bg-amber-700 text-white text-[11px] font-extrabold">{dobInfo.weekday}</span>
+              </div>
+            ) : (
+              <span className="text-[11px] text-slate-500 block">Select Day, Month, and Year to view weekday</span>
+            )}
+          </div>
+
+          {/* TIME OF BIRTH SELECTOR (24-HOUR CLOCK) */}
+          <div className="min-w-0 p-4 rounded-2xl bg-amber-50/50 border border-amber-500/30 space-y-3">
+            <div className="flex items-center justify-between">
+              <label className="flex items-center gap-1.5 text-xs font-bold text-slate-900 uppercase tracking-wider">
+                <Clock className="w-4 h-4 text-amber-600" />
                 <span>Time of Birth (24-Hour Clock) *</span>
               </label>
-              <Input
-                id="tob"
-                type="time"
-                step="60"
-                required
-                className="bg-white border-amber-500/30 text-slate-900 text-xs sm:text-sm w-full min-w-0 cursor-pointer"
-                value={tob}
-                onChange={(e) => setTob(e.target.value)}
-              />
-              <span className="text-[10px] text-slate-500 block mt-1">24-Hour Format (e.g. 14:30 for 2:30 PM)</span>
+              {tobInfo && (
+                <Badge className="bg-amber-100 border border-amber-400 text-amber-900 text-[11px] font-bold">
+                  {tobInfo.time12}
+                </Badge>
+              )}
             </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              {/* HOUR */}
+              <div>
+                <span className="text-[10px] font-bold text-slate-500 uppercase block mb-1">Hour (00 - 23)</span>
+                <Select
+                  value={tobHour}
+                  onChange={(e) => setTobHour(e.target.value)}
+                  className="bg-white border-amber-500/30 text-slate-900 text-xs sm:text-sm font-semibold w-full"
+                >
+                  {Array.from({ length: 24 }, (_, i) => {
+                    const val = i.toString().padStart(2, "0");
+                    const period = i >= 12 ? "PM" : "AM";
+                    const h12 = i % 12 === 0 ? 12 : i % 12;
+                    return <option key={val} value={val}>{val}:00 ({h12} {period})</option>;
+                  })}
+                </Select>
+              </div>
+
+              {/* MINUTE */}
+              <div>
+                <span className="text-[10px] font-bold text-slate-500 uppercase block mb-1">Minute (00 - 59)</span>
+                <Select
+                  value={tobMinute}
+                  onChange={(e) => setTobMinute(e.target.value)}
+                  className="bg-white border-amber-500/30 text-slate-900 text-xs sm:text-sm font-semibold w-full"
+                >
+                  {Array.from({ length: 60 }, (_, i) => {
+                    const val = i.toString().padStart(2, "0");
+                    return <option key={val} value={val}>{val}</option>;
+                  })}
+                </Select>
+              </div>
+            </div>
+
+            {tobInfo && (
+              <div className="p-2.5 rounded-xl bg-amber-100/70 border border-amber-500/30 text-amber-900 text-xs font-bold flex items-center justify-between">
+                <span>24-Hour Time: {tobInfo.time24}</span>
+                <span className="px-2.5 py-0.5 rounded-md bg-amber-700 text-white text-[11px] font-extrabold">{tobInfo.time12}</span>
+              </div>
+            )}
           </div>
 
           {/* PLACE OF BIRTH */}
