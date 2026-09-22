@@ -14,12 +14,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand Info */}
           <div className="space-y-3.5">
-            {/* Extended Logo Container */}
-            <div className="relative h-16 sm:h-20 w-fit rounded-xl overflow-hidden bg-white border border-amber-500/40 shadow-lg flex items-center justify-center p-1">
+            {/* Extended Logo Container - Same width as subheading */}
+            <div className="relative w-full max-w-[260px] sm:max-w-[280px] h-20 sm:h-24 rounded-xl overflow-hidden bg-white border border-amber-500/40 shadow-lg flex items-center justify-center p-1.5">
               <img
                 src="/jdm-logo.jpg"
                 alt="Jyotisham - Acharya Deepak Mehta Astrologer"
-                className="h-full w-auto object-contain rounded-lg"
+                className="w-full h-full object-contain rounded-lg"
               />
             </div>
             
