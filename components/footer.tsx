@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { Sparkles, Phone, Mail, MessageCircle, Heart, Briefcase, Baby, Coins, Plane, Youtube } from "lucide-react";
+import { Sparkles, Phone, Mail, MessageCircle, Heart, Briefcase, Baby, Coins, Plane, Youtube, Instagram } from "lucide-react";
 
 export function Footer() {
   const businessEmail = "secretsofastrology2dh@gmail.com";
   const businessPhone = "+91 9319506529";
   const youtubeUrl = "https://www.youtube.com/@Nadi-Veda";
+  const instagramUrl = "https://www.instagram.com/nadiveda_jyotish?stkn=MWprZ2E0OG4wMzVkcg==";
 
   return (
     <footer className="bg-[#060718] text-slate-300 pt-16 pb-24 lg:pb-12 text-sm border-t border-amber-500/20">
@@ -52,6 +53,16 @@ export function Footer() {
               >
                 <Youtube className="w-3.5 h-3.5 text-red-400" />
                 <span>YouTube</span>
+              </a>
+              <a
+                href={instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-300 transition-colors flex items-center gap-1.5 text-xs font-semibold text-pink-400 bg-pink-950/60 border border-pink-500/30 px-3 py-1.5 rounded-full"
+                aria-label="Instagram Profile"
+              >
+                <Instagram className="w-3.5 h-3.5 text-pink-400" />
+                <span>Instagram</span>
               </a>
             </div>
           </div>

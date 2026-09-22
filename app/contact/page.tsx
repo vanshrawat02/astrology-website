@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { Phone, Mail, MessageCircle, Clock, Send, ShieldCheck, CheckCircle2, Youtube, Calendar, MapPin } from "lucide-react";
+import { Phone, Mail, MessageCircle, Clock, Send, ShieldCheck, CheckCircle2, Youtube, Calendar, MapPin, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -468,6 +468,39 @@ export default function ContactPage() {
                         >
                           <Youtube className="w-3.5 h-3.5 text-red-600" />
                           <span>Subscribe / Watch Videos</span>
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Instagram Profile Card */}
+                <div className="glass-card-light rounded-2xl p-6 border border-amber-500/30">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-600 shrink-0">
+                      <Instagram className="w-6 h-6" />
+                    </div>
+                    <div className="flex-1">
+                      <span className="text-xs uppercase font-bold text-amber-700 tracking-wider block mb-1">
+                        Instagram Handle
+                      </span>
+                      <a
+                        href="https://www.instagram.com/nadiveda_jyotish?stkn=MWprZ2E0OG4wMzVkcg=="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm sm:text-base font-extrabold text-slate-900 hover:text-pink-600 transition-colors block break-all mb-3 opacity-100"
+                      >
+                        @nadiveda_jyotish
+                      </a>
+                      <Button size="sm" variant="outline" className="border-pink-500/40 text-pink-700 hover:bg-pink-500/10 text-xs" asChild>
+                        <a
+                          href="https://www.instagram.com/nadiveda_jyotish?stkn=MWprZ2E0OG4wMzVkcg=="
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5"
+                        >
+                          <Instagram className="w-3.5 h-3.5 text-pink-600" />
+                          <span>Follow on Instagram</span>
                         </a>
                       </Button>
                     </div>
