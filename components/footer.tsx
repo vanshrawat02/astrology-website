@@ -8,7 +8,7 @@ export function Footer() {
   const instagramUrl = "https://www.instagram.com/nadiveda_jyotish?stkn=MWprZ2E0OG4wMzVkcg==";
 
   return (
-    <footer className="bg-[#060718] text-slate-300 pt-16 pb-24 lg:pb-12 text-sm border-t border-amber-500/20">
+    <footer className="bg-[#060718] text-slate-300 pt-10 pb-10 sm:pt-12 sm:pb-12 text-sm border-t border-amber-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand Info */}

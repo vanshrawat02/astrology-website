@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en" className={`scroll-smooth ${cinzel.variable} ${plusJakartaSans.variable}`}>
       <body className="font-sans antialiased bg-[#060718] text-slate-900 min-h-screen flex flex-col">
         {/* Main Content Box (Slides over Footer with bottom shadow) */}
-        <div className="relative z-10 bg-white shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] mb-[580px] md:mb-[480px] lg:mb-[400px] min-h-screen flex flex-col">
+        <div className="relative z-10 bg-white shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] mb-[680px] sm:mb-[620px] md:mb-[520px] lg:mb-[440px] min-h-screen flex flex-col">
           <Header />
           <main className="flex-1">{children}</main>
         </div>

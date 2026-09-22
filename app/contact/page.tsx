@@ -276,8 +276,8 @@ function ContactForm() {
                   onChange={(e) => setTobAmPm(e.target.value)}
                   className="bg-white border-amber-500/30 text-slate-900 text-xs sm:text-sm font-bold w-full"
                 >
-                  <option value="AM">AM (Morning)</option>
-                  <option value="PM">PM (Evening)</option>
+                  <option value="AM">AM</option>
+                  <option value="PM">PM</option>
                 </Select>
               </div>
             </div>
