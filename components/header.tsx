@@ -25,24 +25,27 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-amber-500/20 shadow-sm transition-all duration-300">
       {/* Top bar with quick contact info */}
-      <div className="bg-amber-500/10 border-b border-amber-500/20 text-slate-800 py-1 text-[10px] sm:text-xs font-medium overflow-hidden">
+      <div className="bg-amber-500/10 border-b border-amber-500/20 text-slate-800 py-1.5 sm:py-1 text-[10px] sm:text-xs font-medium overflow-hidden">
         <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
-          <div className="flex items-center gap-1.5 text-amber-900 font-semibold text-[10px] sm:text-xs min-w-0 flex-1">
-            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-600 animate-pulse shrink-0" />
+          {/* Desktop Left: Expert Title */}
+          <div className="hidden sm:flex items-center gap-1.5 text-amber-900 font-semibold text-xs min-w-0 flex-1">
+            <Sparkles className="w-3.5 h-3.5 text-amber-600 animate-pulse shrink-0" />
             <span className="truncate">Certified Expert: Mr. Deepak Mehta — Vedic Astrology & Bhrigu Nandi Nadi</span>
           </div>
-          <div className="flex items-center justify-end gap-x-3 text-slate-800 shrink-0">
+
+          {/* Desktop Right / Mobile Full: Email & Phone Side by Side */}
+          <div className="flex items-center justify-between sm:justify-end gap-x-2 sm:gap-x-4 text-slate-800 w-full sm:w-auto min-w-0 text-[10px] sm:text-xs font-bold">
             <a
               href={`mailto:${businessEmail}`}
-              className="hidden sm:flex items-center gap-1 text-slate-700 hover:text-amber-700 transition-colors"
+              className="flex items-center gap-1 text-slate-900 hover:text-amber-700 transition-colors min-w-0 truncate"
               title={businessEmail}
             >
-              <Mail className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+              <Mail className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-600 shrink-0" />
               <span className="truncate">{businessEmail}</span>
             </a>
             <a
               href="tel:+919319506529"
-              className="flex items-center gap-1 text-slate-900 hover:text-amber-700 transition-colors font-bold shrink-0 text-[10px] sm:text-xs"
+              className="flex items-center gap-1 text-slate-900 hover:text-amber-700 transition-colors font-extrabold shrink-0"
             >
               <Phone className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-600 shrink-0" />
               <span>{businessPhone}</span>
