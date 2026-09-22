@@ -501,6 +501,41 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              {/* Office Address & Map Card */}
+              <div className="glass-card-light rounded-2xl p-6 border border-amber-500/30 shadow-sm mt-6">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-600 shrink-0 shadow-xs">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <span className="text-xs uppercase font-bold text-amber-700 tracking-wider block mb-1">
+                      Consultation Office Location
+                    </span>
+                    <h4 className="text-base font-extrabold text-slate-900 leading-snug">
+                      Ramprastha Colony, Ghaziabad (UP)
+                    </h4>
+                    <p className="text-xs text-slate-600 mt-1">
+                      Ghaziabad, Uttar Pradesh, India
+                    </p>
+                  </div>
+                </div>
+
+                {/* Google Map Embed */}
+                <div className="w-full h-52 sm:h-60 rounded-xl overflow-hidden border border-amber-500/20 shadow-sm mt-3 relative">
+                  <iframe
+                    title="Ramprastha Colony, Ghaziabad Map Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14006.914279762463!2d77.3195034!3d28.6534571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb591bcfc2a5%3A0x6b12a80695079a40!2sRam%20Prastha%20Colony%2C%20Surya%20Nagar%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201011!5e0!3m2!1sen!2sin!4v1727000000000!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full rounded-xl"
+                  ></iframe>
+                </div>
+              </div>
+
               {/* Hours */}
               <div className="glass-card-light rounded-2xl p-6 border border-amber-500/20 text-xs text-slate-700 space-y-2 mt-6">
                 <div className="flex items-center justify-between font-bold text-slate-900 border-b border-amber-500/20 pb-2 mb-2">

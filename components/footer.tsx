@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { Sparkles, Phone, Mail, MessageCircle, Heart, Briefcase, Baby, Coins, Plane, Youtube, Instagram } from "lucide-react";
+import { Sparkles, Phone, Mail, MapPin, MessageCircle, Heart, Briefcase, Baby, Coins, Plane, Youtube, Instagram } from "lucide-react";
 
 export function Footer() {
   const businessEmail = "secretsofastrology2dh@gmail.com";
   const businessPhone = "+91 9319506529";
+  const businessAddress = "Ramprastha Colony, Ghaziabad (UP)";
   const youtubeUrl = "https://www.youtube.com/@Nadi-Veda";
   const instagramUrl = "https://www.instagram.com/nadiveda_jyotish?stkn=MWprZ2E0OG4wMzVkcg==";
 
@@ -152,6 +153,15 @@ export function Footer() {
               Get in Touch
             </h4>
             <ul className="space-y-3.5 text-xs">
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-[11px] text-slate-400 block uppercase font-semibold">Location / Address</span>
+                  <span className="text-white font-bold block leading-snug">
+                    {businessAddress}
+                  </span>
+                </div>
+              </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
