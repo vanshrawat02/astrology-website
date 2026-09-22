@@ -13,67 +13,30 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand Info */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="relative h-12 sm:h-14 w-auto rounded-xl overflow-hidden bg-white border border-amber-500/40 shadow-md shrink-0 flex items-center justify-center p-0.5">
-                <img
-                  src="/jdm-logo.jpg"
-                  alt="Jyotisham - Acharya Deepak Mehta Astrologer"
-                  className="h-full w-auto object-contain rounded-lg"
-                />
-              </div>
-              <div>
-                <span className="font-heading font-extrabold text-xl gold-gradient-text block leading-tight tracking-wider uppercase">
-                  NADIVEDA
-                </span>
-                <span className="text-[10px] text-amber-400 font-semibold uppercase block tracking-wide">
-                  Vedic Astrology & Bhrigu Nandi Nadi
-                </span>
-              </div>
+          <div className="space-y-3.5">
+            {/* Extended Logo Container */}
+            <div className="relative h-16 sm:h-20 w-fit rounded-xl overflow-hidden bg-white border border-amber-500/40 shadow-lg flex items-center justify-center p-1">
+              <img
+                src="/jdm-logo.jpg"
+                alt="Jyotisham - Acharya Deepak Mehta Astrologer"
+                className="h-full w-auto object-contain rounded-lg"
+              />
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
+            
+            {/* Heading & Subheading Below Logo */}
+            <div>
+              <span className="font-heading font-extrabold text-xl sm:text-2xl gold-gradient-text block leading-tight tracking-wider uppercase mb-1">
+                NADIVEDA
+              </span>
+              <span className="text-xs text-amber-400 font-semibold uppercase block tracking-wide leading-snug">
+                Vedic Astrology & Bhrigu Nandi Nadi
+              </span>
+            </div>
+
+            {/* Description Below Heading */}
+            <p className="text-xs text-slate-400 leading-relaxed pt-1">
               Empowering lives with authentic Vedic Astrology insights, Bhrigu Nandi Nadi readings, and effective practical remedies.
             </p>
-            <div className="pt-2">
-              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2.5">Connect With Us</span>
-              <div className="flex flex-col gap-2 max-w-[200px]">
-                {/* 1. WhatsApp */}
-                <a
-                  href={`https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-500/50 hover:bg-emerald-900/60 px-4 py-2 rounded-full transition-all shadow-sm"
-                  aria-label="WhatsApp"
-                >
-                  <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>WhatsApp</span>
-                </a>
-
-                {/* 2. YouTube */}
-                <a
-                  href={youtubeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 text-xs font-bold text-red-400 bg-red-950/40 border border-red-500/50 hover:bg-red-900/60 px-4 py-2 rounded-full transition-all shadow-sm"
-                  aria-label="YouTube Channel"
-                >
-                  <Youtube className="w-4 h-4 text-red-400 shrink-0" />
-                  <span>YouTube</span>
-                </a>
-
-                {/* 3. Instagram */}
-                <a
-                  href={instagramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 text-xs font-bold text-pink-400 bg-pink-950/40 border border-pink-500/50 hover:bg-pink-900/60 px-4 py-2 rounded-full transition-all shadow-sm"
-                  aria-label="Instagram Profile"
-                >
-                  <Instagram className="w-4 h-4 text-pink-400 shrink-0" />
-                  <span>Instagram</span>
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* Quick Navigation */}
@@ -146,7 +109,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Information */}
+          {/* Contact Information & Social Channels */}
           <div>
             <h4 className="font-heading font-bold text-white text-base mb-4 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-amber-400"></span>
@@ -181,6 +144,47 @@ export function Footer() {
                 </div>
               </li>
             </ul>
+
+            {/* Social Connect Buttons in Get in Touch Column */}
+            <div className="pt-3.5 border-t border-slate-800/80 mt-4">
+              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2.5">
+                Connect With Us
+              </span>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-500/50 hover:bg-emerald-900/60 px-3.5 py-1.5 rounded-full transition-all shadow-sm w-fit"
+                  aria-label="WhatsApp"
+                >
+                  <MessageCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>WhatsApp</span>
+                </a>
+
+                <a
+                  href={youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs font-bold text-red-400 bg-red-950/40 border border-red-500/50 hover:bg-red-900/60 px-3.5 py-1.5 rounded-full transition-all shadow-sm w-fit"
+                  aria-label="YouTube Channel"
+                >
+                  <Youtube className="w-3.5 h-3.5 text-red-400 shrink-0" />
+                  <span>YouTube</span>
+                </a>
+
+                <a
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs font-bold text-pink-400 bg-pink-950/40 border border-pink-500/50 hover:bg-pink-900/60 px-3.5 py-1.5 rounded-full transition-all shadow-sm w-fit"
+                  aria-label="Instagram Profile"
+                >
+                  <Instagram className="w-3.5 h-3.5 text-pink-400 shrink-0" />
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
