@@ -11,17 +11,22 @@ export function Footer() {
   return (
     <footer className="bg-[#060718] text-slate-300 pt-10 pb-10 sm:pt-12 sm:pb-12 text-sm border-t border-amber-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.35fr_1fr_1fr_1.1fr] gap-8 mb-8">
           {/* Brand Info */}
           <div className="space-y-3.5">
-            {/* Extended Logo Container - Fills the white box completely */}
-            <div className="relative w-full max-w-[260px] sm:max-w-[280px] rounded-xl overflow-hidden bg-white border border-amber-500/40 shadow-lg p-0.5">
+            {/* Logo on a light plate so the purple tagline stays legible on the dark footer */}
+            <Link
+              href="/"
+              className="block w-full max-w-[280px] sm:max-w-[300px] rounded-2xl bg-white p-2.5 sm:p-3 border border-amber-500/40 shadow-[0_0_32px_-10px_rgba(245,158,11,0.55)]"
+            >
               <img
-                src="/jdm-logo.jpg"
-                alt="Jyotisham - Acharya Deepak Mehta Astrologer"
-                className="w-full h-auto block rounded-lg object-contain"
+                src="/jdm-logo.webp"
+                alt="JDM Jyotisham - Acharya Deepak Mehta Astrologer"
+                width={972}
+                height={551}
+                className="w-full h-auto block"
               />
-            </div>
+            </Link>
             
             {/* Heading & Subheading Below Logo */}
             <div>

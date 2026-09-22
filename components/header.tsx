@@ -60,14 +60,15 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-14 sm:h-20 flex items-center justify-between gap-2">
         {/* Logo & Business Name */}
         <Link href="/" className="flex items-center gap-2 sm:gap-3 group min-w-0 flex-1">
-          <div className="relative h-9 sm:h-12 md:h-14 w-auto rounded-lg overflow-hidden bg-white border border-amber-500/30 shadow-sm group-hover:scale-105 transition-transform duration-300 flex items-center justify-center shrink-0 p-0.5">
-            <img
-              src="/jdm-logo.jpg"
-              alt="Jyotisham - Acharya Deepak Mehta Astrologer"
-              className="h-full w-auto object-contain rounded"
-            />
-          </div>
-          <div className="min-w-0 flex-1">
+          <img
+            src="/jdm-logo.webp"
+            alt="JDM Jyotisham - Acharya Deepak Mehta Astrologer"
+            width={972}
+            height={551}
+            className="h-11 sm:h-[60px] lg:h-14 xl:h-[62px] w-auto shrink-0 group-hover:scale-105 transition-transform duration-300"
+          />
+          {/* Brand text hidden at lg, where the full nav needs the room */}
+          <div className="min-w-0 flex-1 lg:hidden xl:block">
             <span className="font-heading font-extrabold text-sm sm:text-2xl gold-gradient-text leading-none block tracking-wider uppercase truncate">
               NADIVEDA
             </span>
