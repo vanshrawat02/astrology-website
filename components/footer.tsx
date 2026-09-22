@@ -33,37 +33,45 @@ export function Footer() {
             <p className="text-xs text-slate-400 leading-relaxed">
               Empowering lives with authentic Vedic Astrology insights, Bhrigu Nandi Nadi readings, and effective practical remedies by certified expert <strong>Mr. Deepak Mehta</strong>.
             </p>
-            <div className="flex flex-wrap items-center gap-2 pt-2">
-              <a
-                href={`https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-amber-300 transition-colors flex items-center gap-1.5 text-xs font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1.5 rounded-full"
-                aria-label="WhatsApp"
-              >
-                <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
-                <span>WhatsApp</span>
-              </a>
-              <a
-                href={youtubeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-red-300 transition-colors flex items-center gap-1.5 text-xs font-semibold text-red-400 bg-red-950/60 border border-red-500/30 px-3 py-1.5 rounded-full"
-                aria-label="YouTube Channel"
-              >
-                <Youtube className="w-3.5 h-3.5 text-red-400" />
-                <span>YouTube</span>
-              </a>
-              <a
-                href={instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-pink-300 transition-colors flex items-center gap-1.5 text-xs font-semibold text-pink-400 bg-pink-950/60 border border-pink-500/30 px-3 py-1.5 rounded-full"
-                aria-label="Instagram Profile"
-              >
-                <Instagram className="w-3.5 h-3.5 text-pink-400" />
-                <span>Instagram</span>
-              </a>
+            <div className="pt-2">
+              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Connect With Us</span>
+              <div className="grid grid-cols-2 gap-2 max-w-[280px]">
+                {/* 1. WhatsApp */}
+                <a
+                  href={`https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-500/50 hover:bg-emerald-900/60 px-3.5 py-2 rounded-full transition-all shadow-sm"
+                  aria-label="WhatsApp"
+                >
+                  <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>WhatsApp</span>
+                </a>
+
+                {/* 2. YouTube */}
+                <a
+                  href={youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs font-bold text-red-400 bg-red-950/40 border border-red-500/50 hover:bg-red-900/60 px-3.5 py-2 rounded-full transition-all shadow-sm"
+                  aria-label="YouTube Channel"
+                >
+                  <Youtube className="w-4 h-4 text-red-400 shrink-0" />
+                  <span>YouTube</span>
+                </a>
+
+                {/* 3. Instagram */}
+                <a
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs font-bold text-pink-400 bg-pink-950/40 border border-pink-500/50 hover:bg-pink-900/60 px-3.5 py-2 rounded-full transition-all shadow-sm col-span-1"
+                  aria-label="Instagram Profile"
+                >
+                  <Instagram className="w-4 h-4 text-pink-400 shrink-0" />
+                  <span>Instagram</span>
+                </a>
+              </div>
             </div>
           </div>
 
