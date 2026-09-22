@@ -16,7 +16,7 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    id: "horoscope",
+    id: "horoscope-analysis",
     title: "Horoscope Analysis & Consultation",
     shortTitle: "Horoscope Analysis",
     icon: Sparkles,
@@ -50,7 +50,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "marriage",
+    id: "marriage-compatibility",
     title: "Marriage & Relationship Compatibility",
     shortTitle: "Marriage & Relationships",
     icon: Heart,
@@ -84,7 +84,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "career",
+    id: "career-business",
     title: "Career & Business Growth",
     shortTitle: "Career & Business",
     icon: Briefcase,
@@ -118,7 +118,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "family",
+    id: "child-birth-family",
     title: "Child Birth & Family Prospects",
     shortTitle: "Child Birth & Family",
     icon: Baby,
@@ -151,7 +151,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "wealth",
+    id: "finance-wealth",
     title: "Finance & Wealth Guidance",
     shortTitle: "Finance & Wealth",
     icon: Coins,
@@ -184,7 +184,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "travel",
+    id: "foreign-travel",
     title: "Foreign Travels & Relocation",
     shortTitle: "Foreign Travel & Settlement",
     icon: Plane,
@@ -217,3 +217,7 @@ export const services: Service[] = [
     ],
   },
 ];
+
+export function getService(id: string) {
+  return services.find((service) => service.id === id);
+}

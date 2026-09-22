@@ -80,7 +80,7 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-8">
           <nav className="flex items-center gap-8 text-sm font-semibold text-slate-700">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
               const linkClass = isActive
                 ? "text-gold-500 border-b-2 border-gold-500 pb-1 font-bold"
                 : "hover:text-gold-500 transition-colors";
@@ -108,8 +108,11 @@ export function Header() {
                         return (
                           <Link
                             key={service.id}
-                            href={`/services#${service.id}`}
-                            className="flex items-start gap-3 rounded-xl px-3 py-2.5 hover:bg-amber-50 transition-colors"
+                            href={`/services/${service.id}`}
+                            onClick={(e) => e.currentTarget.blur()}
+                            className={`flex items-start gap-3 rounded-xl px-3 py-2.5 hover:bg-amber-50 transition-colors ${
+                              pathname === `/services/${service.id}` ? "bg-amber-50" : ""
+                            }`}
                           >
                             <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-gold-600 to-amber-500 flex items-center justify-center text-white shrink-0">
                               <Icon className="w-4 h-4" />
@@ -123,6 +126,7 @@ export function Header() {
                       })}
                       <Link
                         href="/services"
+                        onClick={(e) => e.currentTarget.blur()}
                         className="mt-1 flex items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold text-amber-800 bg-amber-50 hover:bg-amber-100 transition-colors"
                       >
                         View All Services
@@ -158,7 +162,7 @@ export function Header() {
         <div className="lg:hidden bg-white border-b border-amber-500/20 px-6 pt-4 pb-6 space-y-4 shadow-lg max-h-[calc(100dvh-5rem)] overflow-y-auto">
           <nav className="space-y-3">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
               return (
                 <Link
                   key={link.href}
@@ -183,7 +187,7 @@ export function Header() {
                 return (
                   <Link
                     key={service.id}
-                    href={`/services#${service.id}`}
+                    href={`/services/${service.id}`}
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-2 rounded-lg border border-amber-500/20 bg-amber-50/60 px-2.5 py-2 text-xs font-semibold text-slate-800 hover:bg-amber-100"
                   >

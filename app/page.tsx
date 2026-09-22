@@ -29,6 +29,7 @@ import { Badge } from "@/components/ui/badge";
 export default function HomePage() {
   const specializations = [
     {
+      slug: "marriage-compatibility",
       title: "Marriage & Relationship Compatibility",
       description:
         "Comprehensive Ashtakoot Guna Milan, Nadi Dosha, Manglik analysis, and dispute resolution for lifelong marital harmony.",
@@ -36,6 +37,7 @@ export default function HomePage() {
       badge: "Popular",
     },
     {
+      slug: "career-business",
       title: "Career & Business Growth",
       description:
         "Identify favorable Mahadasha periods, ideal business launch timing, promotion transits, and commercial success path.",
@@ -43,6 +45,7 @@ export default function HomePage() {
       badge: "High Accuracy",
     },
     {
+      slug: "child-birth-family",
       title: "Child Birth & Family Prospects",
       description:
         "Santana Yoga analysis, progeny timing, family peace, and ancestral planetary alignment for progeny wellbeing.",
@@ -50,6 +53,7 @@ export default function HomePage() {
       badge: "Family Peace",
     },
     {
+      slug: "finance-wealth",
       title: "Finance & Wealth Guidance",
       description:
         "In-depth 2nd and 11th wealth houses evaluation, debt recovery, safe investments, and financial stability remedies.",
@@ -57,6 +61,7 @@ export default function HomePage() {
       badge: "Prosperity",
     },
     {
+      slug: "foreign-travel",
       title: "Foreign Travels & Relocation",
       description:
         "Evaluate 9th & 12th houses for overseas employment, higher studies abroad, PR/visa success, and foreign settlement.",
@@ -348,6 +353,12 @@ export default function HomePage() {
                     </Link>
                   </Button>
                   <Button variant="outline" className="border-amber-500/40 text-slate-800 hover:bg-amber-500/10" asChild>
+                    <Link href="/services/horoscope-analysis" className="flex items-center gap-2">
+                      <span>Read More</span>
+                      <ArrowRight className="w-4 h-4 text-amber-600" />
+                    </Link>
+                  </Button>
+                  <Button variant="ghost" className="text-slate-800 hover:bg-amber-500/10" asChild>
                     <a href="tel:+919319506529" className="flex items-center gap-2">
                       <Phone className="w-4 h-4 text-amber-600" />
                       <span>Call Astrologer</span>
@@ -390,9 +401,13 @@ export default function HomePage() {
             {specializations.map((item, index) => {
               const Icon = item.icon;
               return (
-                <div key={index} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc((100%-4rem)/3)] flex">
+                <Link
+                  key={index}
+                  href={`/services/${item.slug}`}
+                  className="group w-full md:w-[calc(50%-1rem)] lg:w-[calc((100%-4rem)/3)] flex"
+                >
                   <Card
-                    className="glass-card-light flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 w-full"
+                    className="glass-card-light flex flex-col justify-between transition-all duration-300 group-hover:-translate-y-1.5 w-full"
                   >
                     <CardHeader>
                       <div className="flex items-center justify-between mb-4">
@@ -403,7 +418,7 @@ export default function HomePage() {
                           {item.badge}
                         </Badge>
                       </div>
-                      <CardTitle className="text-xl font-bold text-slate-900">
+                      <CardTitle className="text-xl font-bold text-slate-900 group-hover:text-amber-700 transition-colors">
                         {item.title}
                       </CardTitle>
                     </CardHeader>
@@ -411,16 +426,13 @@ export default function HomePage() {
                       <CardDescription className="text-slate-600 text-sm leading-relaxed">
                         {item.description}
                       </CardDescription>
-                      <Link
-                        href={`/contact?service=${encodeURIComponent(item.title)}`}
-                        className="inline-flex items-center gap-2 text-gold-600 font-bold text-sm hover:gap-3 transition-all"
-                      >
-                        <span>Book Consultation</span>
+                      <span className="inline-flex items-center gap-2 text-gold-600 font-bold text-sm group-hover:gap-3 transition-all">
+                        <span>Read More</span>
                         <ArrowRight className="w-4 h-4" />
-                      </Link>
+                      </span>
                     </CardContent>
                   </Card>
-                </div>
+                </Link>
               );
             })}
           </div>
