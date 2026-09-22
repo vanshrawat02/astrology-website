@@ -365,128 +365,166 @@ export default function ContactPage() {
 
           {/* RIGHT INFO CARDS */}
           <div className="lg:col-span-5 h-full">
-            <Card className="glass-card-light p-5 sm:p-7 border border-amber-500/30 shadow-lg flex flex-col justify-between h-full">
+            <Card className="glass-card-light p-6 sm:p-8 border border-amber-500/30 shadow-lg flex flex-col justify-between h-full">
               <div>
-                <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-900 mb-5 flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
                   Direct Communication Channels
                 </h3>
 
-                <div className="space-y-3">
-                  {/* Phone Helpline */}
-                  <div className="glass-card-light rounded-xl p-3.5 border border-amber-500/30">
-                    <div className="flex items-center justify-between gap-2 flex-wrap">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-600 flex items-center justify-center shrink-0 shadow-xs">
-                          <Phone className="w-5 h-5" />
-                        </div>
-                        <div>
-                          <span className="text-[10px] uppercase font-bold text-amber-700 tracking-wider block leading-none mb-0.5">
-                            Phone / Helpline
-                          </span>
-                          <a href="tel:+919319506529" className="text-sm sm:text-base font-extrabold text-slate-900 hover:text-amber-700">
-                            +91 9319506529
-                          </a>
-                        </div>
+                <div className="space-y-3.5">
+                  {/* Phone Helpline Card */}
+                  <div className="glass-card-light rounded-2xl p-4 border border-amber-500/30">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-600 shrink-0 shadow-xs">
+                        <Phone className="w-5 h-5" />
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Button size="sm" className="btn-gold-shimmer text-xs py-1 h-8" asChild>
-                          <a href="tel:+919319506529" className="flex items-center gap-1">
-                            <Phone className="w-3.5 h-3.5" />
-                            <span>Call</span>
-                          </a>
-                        </Button>
-                        <Button size="sm" variant="emerald" className="text-xs py-1 h-8" asChild>
-                          <a
-                            href="https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation."
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1"
-                          >
-                            <MessageCircle className="w-3.5 h-3.5" />
-                            <span>WhatsApp</span>
-                          </a>
-                        </Button>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-[11px] uppercase font-bold text-amber-700 tracking-wider block mb-0.5">
+                          Phone / Helpline
+                        </span>
+                        <a
+                          href="tel:+919319506529"
+                          className="text-sm sm:text-base font-extrabold text-slate-900 hover:text-amber-700 transition-colors block mb-2"
+                        >
+                          +91 9319506529
+                        </a>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <Button size="sm" className="btn-gold-shimmer text-xs py-1 h-8" asChild>
+                            <a href="tel:+919319506529" className="flex items-center gap-1.5">
+                              <Phone className="w-3.5 h-3.5" />
+                              <span>Call Now</span>
+                            </a>
+                          </Button>
+                          <Button size="sm" variant="emerald" className="text-xs py-1 h-8" asChild>
+                            <a
+                              href="https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation."
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-1.5"
+                            >
+                              <MessageCircle className="w-3.5 h-3.5" />
+                              <span>WhatsApp</span>
+                            </a>
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Official Email */}
-                  <div className="glass-card-light rounded-xl p-3.5 border border-amber-500/30 flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-600 flex items-center justify-center shrink-0 shadow-xs">
+                  {/* Official Email Card */}
+                  <div className="glass-card-light rounded-2xl p-4 border border-amber-500/30">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-600 shrink-0 shadow-xs">
                         <Mail className="w-5 h-5" />
                       </div>
-                      <div className="min-w-0">
-                        <span className="text-[10px] uppercase font-bold text-amber-700 tracking-wider block leading-none mb-0.5">
+                      <div className="flex-1 min-w-0">
+                        <span className="text-[11px] uppercase font-bold text-amber-700 tracking-wider block mb-0.5">
                           Official Email
                         </span>
-                        <a href="mailto:secretsofastrology2dh@gmail.com" className="text-xs sm:text-sm font-extrabold text-slate-900 hover:text-amber-700 truncate block">
+                        <a
+                          href="mailto:secretsofastrology2dh@gmail.com"
+                          className="text-xs sm:text-sm font-extrabold text-slate-900 hover:text-amber-700 transition-colors block break-all mb-2"
+                        >
                           secretsofastrology2dh@gmail.com
                         </a>
+                        <Button size="sm" variant="outline" className="border-amber-500/40 text-slate-800 hover:bg-amber-500/10 text-xs h-8" asChild>
+                          <a href="mailto:secretsofastrology2dh@gmail.com" className="flex items-center gap-1.5">
+                            <Mail className="w-3.5 h-3.5 text-amber-600" />
+                            <span>Send Email</span>
+                          </a>
+                        </Button>
                       </div>
                     </div>
-                    <Button size="sm" variant="outline" className="border-amber-500/40 text-slate-800 text-xs py-1 h-8 shrink-0" asChild>
-                      <a href="mailto:secretsofastrology2dh@gmail.com">Email Us</a>
-                    </Button>
                   </div>
 
-                  {/* YouTube & Instagram 2-Column Grid */}
-                  <div className="grid grid-cols-2 gap-3">
-                    {/* YouTube */}
-                    <div className="glass-card-light rounded-xl p-3 border border-red-500/25 flex flex-col justify-between">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-8 h-8 rounded-lg bg-red-500/10 text-red-600 flex items-center justify-center shrink-0">
-                          <Youtube className="w-4 h-4" />
-                        </div>
-                        <div className="min-w-0">
-                          <span className="text-[9px] uppercase font-bold text-amber-700 block leading-none mb-0.5">YouTube</span>
-                          <span className="text-xs font-extrabold text-slate-900 truncate block">@Nadi-Veda</span>
-                        </div>
+                  {/* YouTube Channel Card */}
+                  <div className="glass-card-light rounded-2xl p-4 border border-red-500/30">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-600 shrink-0 shadow-xs">
+                        <Youtube className="w-5 h-5" />
                       </div>
-                      <Button size="sm" variant="outline" className="border-red-500/30 text-red-700 hover:bg-red-500/10 text-[11px] h-7 w-full py-0" asChild>
-                        <a href="https://www.youtube.com/@Nadi-Veda" target="_blank" rel="noopener noreferrer">
-                          <span>Watch Videos</span>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-[11px] uppercase font-bold text-amber-700 tracking-wider block mb-0.5">
+                          YouTube Channel
+                        </span>
+                        <a
+                          href="https://www.youtube.com/@Nadi-Veda"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs sm:text-sm font-extrabold text-slate-900 hover:text-red-600 transition-colors block break-all mb-2"
+                        >
+                          @Nadi-Veda
                         </a>
-                      </Button>
+                        <Button size="sm" variant="outline" className="border-red-500/40 text-red-700 hover:bg-red-500/10 text-xs h-8" asChild>
+                          <a
+                            href="https://www.youtube.com/@Nadi-Veda"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1.5"
+                          >
+                            <Youtube className="w-3.5 h-3.5 text-red-600" />
+                            <span>Subscribe / Watch Videos</span>
+                          </a>
+                        </Button>
+                      </div>
                     </div>
+                  </div>
 
-                    {/* Instagram */}
-                    <div className="glass-card-light rounded-xl p-3 border border-pink-500/25 flex flex-col justify-between">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-8 h-8 rounded-lg bg-pink-500/10 text-pink-600 flex items-center justify-center shrink-0">
-                          <Instagram className="w-4 h-4" />
-                        </div>
-                        <div className="min-w-0">
-                          <span className="text-[9px] uppercase font-bold text-amber-700 block leading-none mb-0.5">Instagram</span>
-                          <span className="text-xs font-extrabold text-slate-900 truncate block">@nadiveda_jyotish</span>
-                        </div>
+                  {/* Instagram Profile Card */}
+                  <div className="glass-card-light rounded-2xl p-4 border border-pink-500/30">
+                    <div className="flex items-start gap-3.5">
+                      <div className="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-600 shrink-0 shadow-xs">
+                        <Instagram className="w-5 h-5" />
                       </div>
-                      <Button size="sm" variant="outline" className="border-pink-500/30 text-pink-700 hover:bg-pink-500/10 text-[11px] h-7 w-full py-0" asChild>
-                        <a href="https://www.instagram.com/nadiveda_jyotish?stkn=MWprZ2E0OG4wMzVkcg==" target="_blank" rel="noopener noreferrer">
-                          <span>Follow</span>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-[11px] uppercase font-bold text-amber-700 tracking-wider block mb-0.5">
+                          Instagram Handle
+                        </span>
+                        <a
+                          href="https://www.instagram.com/nadiveda_jyotish?stkn=MWprZ2E0OG4wMzVkcg=="
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs sm:text-sm font-extrabold text-slate-900 hover:text-pink-600 transition-colors block break-all mb-2"
+                        >
+                          @nadiveda_jyotish
                         </a>
-                      </Button>
+                        <Button size="sm" variant="outline" className="border-pink-500/40 text-pink-700 hover:bg-pink-500/10 text-xs h-8" asChild>
+                          <a
+                            href="https://www.instagram.com/nadiveda_jyotish?stkn=MWprZ2E0OG4wMzVkcg=="
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1.5"
+                          >
+                            <Instagram className="w-3.5 h-3.5 text-pink-600" />
+                            <span>Follow on Instagram</span>
+                          </a>
+                        </Button>
+                      </div>
                     </div>
                   </div>
 
                   {/* Office Address & Map Card */}
-                  <div className="glass-card-light rounded-xl p-3.5 border border-amber-500/30">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-600 flex items-center justify-center shrink-0">
-                        <MapPin className="w-4 h-4" />
+                  <div className="glass-card-light rounded-2xl p-4 border border-amber-500/30 shadow-xs">
+                    <div className="flex items-start gap-3.5 mb-3">
+                      <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-600 shrink-0 shadow-xs">
+                        <MapPin className="w-5 h-5" />
                       </div>
-                      <div>
-                        <span className="text-[10px] uppercase font-bold text-amber-700 tracking-wider block leading-none mb-0.5">
-                          Office Location
+                      <div className="flex-1">
+                        <span className="text-[11px] uppercase font-bold text-amber-700 tracking-wider block mb-0.5">
+                          Consultation Office Location
                         </span>
-                        <h4 className="text-xs sm:text-sm font-extrabold text-slate-900 leading-tight">
+                        <h4 className="text-sm font-extrabold text-slate-900 leading-snug">
                           Ramprastha Colony, Ghaziabad (UP)
                         </h4>
+                        <p className="text-[11px] text-slate-600 mt-0.5">
+                          Ghaziabad, Uttar Pradesh, India
+                        </p>
                       </div>
                     </div>
 
-                    <div className="w-full h-32 sm:h-36 rounded-lg overflow-hidden border border-amber-500/20 shadow-xs">
+                    {/* Google Map Embed */}
+                    <div className="w-full h-36 sm:h-44 rounded-xl overflow-hidden border border-amber-500/20 shadow-xs">
                       <iframe
                         title="Ramprastha Colony, Ghaziabad Map Location"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14006.914279762463!2d77.3195034!3d28.6534571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb591bcfc2a5%3A0x6b12a80695079a40!2sRam%20Prastha%20Colony%2C%20Surya%20Nagar%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201011!5e0!3m2!1sen!2sin!4v1727000000000!5m2!1sen!2sin"
@@ -496,25 +534,25 @@ export default function ContactPage() {
                         allowFullScreen={false}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        className="w-full h-full rounded-lg"
+                        className="w-full h-full rounded-xl"
                       ></iframe>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Hours */}
-              <div className="glass-card-light rounded-xl p-3 border border-amber-500/20 text-xs text-slate-700 space-y-1 mt-3">
-                <div className="flex items-center justify-between font-bold text-slate-900 border-b border-amber-500/20 pb-1 mb-1">
-                  <span className="flex items-center gap-1.5 text-[11px]">
-                    <Clock className="w-3.5 h-3.5 text-amber-600" /> Hours
+              {/* Consultation Hours */}
+              <div className="glass-card-light rounded-2xl p-4 border border-amber-500/20 text-xs text-slate-700 space-y-1.5 mt-4">
+                <div className="flex items-center justify-between font-bold text-slate-900 border-b border-amber-500/20 pb-1.5 mb-1.5">
+                  <span className="flex items-center gap-1.5">
+                    <Clock className="w-4 h-4 text-amber-600" /> Consultation Hours
                   </span>
-                  <span className="text-emerald-700 font-bold text-[10px]">Available Daily</span>
+                  <span className="text-emerald-700 font-bold text-[11px]">Available Daily</span>
                 </div>
-                <p className="flex justify-between text-[11px]">
-                  <span>Mon – Sat:</span> <strong>9:00 AM – 8:00 PM IST</strong>
+                <p className="flex justify-between text-xs">
+                  <span>Monday – Saturday:</span> <strong>9:00 AM – 8:00 PM IST</strong>
                 </p>
-                <p className="flex justify-between text-[11px]">
+                <p className="flex justify-between text-xs">
                   <span>Sunday:</span> <strong>10:00 AM – 5:00 PM IST</strong>
                 </p>
               </div>
