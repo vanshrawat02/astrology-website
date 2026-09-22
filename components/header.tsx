@@ -75,29 +75,28 @@ export function Header() {
           </div>
         </Link>
 
-        {/* Desktop Nav Links */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-700">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={
-                  isActive
-                    ? "text-gold-500 border-b-2 border-gold-500 pb-1 font-bold"
-                    : "hover:text-gold-500 transition-colors"
-                }
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-        </nav>
+        {/* Desktop Nav Links & Primary CTA Button */}
+        <div className="hidden lg:flex items-center gap-8">
+          <nav className="flex items-center gap-8 text-sm font-semibold text-slate-700">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={
+                    isActive
+                      ? "text-gold-500 border-b-2 border-gold-500 pb-1 font-bold"
+                      : "hover:text-gold-500 transition-colors"
+                  }
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </nav>
 
-        {/* Primary CTA Button */}
-        <div className="hidden sm:flex items-center gap-4">
-          <Button variant="default" size="default" asChild className="btn-gold-shimmer">
+          <Button variant="default" size="default" asChild className="btn-gold-shimmer shrink-0">
             <Link href="/contact" className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
               <span>Book Consultation</span>
