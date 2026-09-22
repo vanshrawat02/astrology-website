@@ -33,17 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`scroll-smooth ${cinzel.variable} ${plusJakartaSans.variable}`}>
       <body className="font-sans antialiased bg-[#060718] text-slate-900 min-h-screen flex flex-col">
-        {/* Main Content Box (Slides over Footer with bottom shadow) */}
-        <div className="relative z-10 bg-white shadow-[0_25px_60px_-15px_rgba(0,0,0,0.6)] mb-[880px] sm:mb-[780px] md:mb-[650px] lg:mb-[560px] min-h-screen flex flex-col">
+        <div className="flex-1 flex flex-col bg-white text-slate-900">
           <Header />
           <main className="flex-1">{children}</main>
         </div>
-
-        {/* Footer Reveal (Fixed bottom-0 z-0 smoothly uncovered as page content moves up) */}
-        <div className="fixed bottom-0 left-0 right-0 z-0 w-full">
-          <Footer />
-        </div>
-
+        <Footer />
         <FloatingWhatsApp />
       </body>
     </html>
