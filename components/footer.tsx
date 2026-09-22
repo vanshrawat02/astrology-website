@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { Sparkles, Phone, Mail, MessageCircle, Heart, Briefcase, Baby, Coins, Plane } from "lucide-react";
+import { Sparkles, Phone, Mail, MessageCircle, Heart, Briefcase, Baby, Coins, Plane, Youtube } from "lucide-react";
 
 export function Footer() {
   const businessEmail = "secretsofastrology2dh@gmail.com";
   const businessPhone = "+91 9319506529";
+  const youtubeUrl = "https://www.youtube.com/@Nadi-Veda";
 
   return (
     <footer className="bg-[#060718] text-slate-300 pt-16 pb-24 lg:pb-12 text-sm border-t border-amber-500/20">
@@ -29,18 +30,28 @@ export function Footer() {
               </div>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Empowering lives with authentic Vedic Astrology insights, Bhrigu Nandi Nadi techniques, and effective practical remedies for marriage, career, finance, family, and foreign travels.
+              Empowering lives with authentic Vedic Astrology insights, Bhrigu Nandi Nadi readings, and effective practical remedies by certified expert <strong>Mr. Deepak Mehta</strong>.
             </p>
-            <div className="flex items-center gap-4 text-amber-400 pt-2">
+            <div className="flex flex-wrap items-center gap-2 pt-2">
               <a
                 href={`https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-amber-300 transition-colors flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1.5 rounded-full"
+                className="hover:text-amber-300 transition-colors flex items-center gap-1.5 text-xs font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1.5 rounded-full"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-400" />
-                <span>Chat on WhatsApp</span>
+                <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
+                <span>WhatsApp</span>
+              </a>
+              <a
+                href={youtubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-red-300 transition-colors flex items-center gap-1.5 text-xs font-semibold text-red-400 bg-red-950/60 border border-red-500/30 px-3 py-1.5 rounded-full"
+                aria-label="YouTube Channel"
+              >
+                <Youtube className="w-3.5 h-3.5 text-red-400" />
+                <span>YouTube</span>
               </a>
             </div>
           </div>

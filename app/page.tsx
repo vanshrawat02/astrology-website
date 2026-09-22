@@ -75,7 +75,7 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto mb-6">
             <Badge variant="default" className="py-2 px-5 text-xs sm:text-sm bg-amber-500/10 border-amber-500/30 text-amber-900 font-bold tracking-wide uppercase">
               <Star className="w-4 h-4 text-amber-500 fill-amber-500 mr-2 inline" />
-              <span>Certified Experts in Vedic Astrology & Bhrigu Nandi Nadi</span>
+              <span>Certified Expert: Mr. Deepak Mehta — Bhrigu Nandi Nadi & Vedic Astrology</span>
             </Badge>
           </div>
 
@@ -87,7 +87,7 @@ export default function HomePage() {
 
           {/* SUB-HEADLINE */}
           <p className="text-slate-600 text-base sm:text-xl max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
-            Gain deep, research-backed insights into your birth chart (Janma Kundali), career Mahadasha transits, marriage compatibility, and life decisions with traditional precision remedies.
+            Gain deep, research-backed insights into your birth chart (Janma Kundali), career Mahadasha transits, marriage compatibility, and life decisions with traditional precision remedies by <strong>Mr. Deepak Mehta</strong>.
           </p>
 
           {/* CALL TO ACTION BUTTONS */}
@@ -113,26 +113,26 @@ export default function HomePage() {
           </div>
 
           {/* HERO QUICK HIGHLIGHTS */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 max-w-5xl w-full mx-auto pt-8 border-t border-amber-500/20 text-xs sm:text-sm text-slate-700">
-            <div className="flex items-center justify-center gap-2 glass-card-light p-3 sm:p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
-              <ShieldCheck className="w-4 h-4 text-gold-500 shrink-0" />
-              <span className="font-semibold text-center">100% Confidential</span>
-            </div>
-            <div className="flex items-center justify-center gap-2 glass-card-light p-3 sm:p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3.5 max-w-5xl w-full mx-auto pt-8 border-t border-amber-500/20 text-xs sm:text-sm text-slate-700">
+            <div className="flex items-center justify-center gap-2 glass-card-light p-3 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs h-12">
               <Compass className="w-4 h-4 text-gold-500 shrink-0" />
-              <span className="font-semibold text-center">Bhrigu Nandi Nadi</span>
+              <span className="font-semibold text-center leading-tight">Bhrigu Nandi Nadi Jyotish</span>
             </div>
-            <div className="flex items-center justify-center gap-2 glass-card-light p-3 sm:p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
-              <Phone className="w-4 h-4 text-gold-500 shrink-0" />
-              <span className="font-semibold text-center">Audio/Video Call</span>
-            </div>
-            <div className="flex items-center justify-center gap-2 glass-card-light p-3 sm:p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
-              <Tag className="w-4 h-4 text-gold-500 shrink-0" />
-              <span className="font-semibold text-center">Fixed Fee: ₹1,500 INR</span>
-            </div>
-            <div className="col-span-2 sm:col-span-1 flex items-center justify-center gap-2 glass-card-light p-3 sm:p-3.5 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs">
+            <div className="flex items-center justify-center gap-2 glass-card-light p-3 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs h-12">
               <Sparkles className="w-4 h-4 text-gold-500 shrink-0" />
-              <span className="font-semibold text-center">Vedic Jyotish Astrology</span>
+              <span className="font-semibold text-center leading-tight">Vedic Jyotish</span>
+            </div>
+            <div className="flex items-center justify-center gap-2 glass-card-light p-3 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs h-12">
+              <ShieldCheck className="w-4 h-4 text-gold-500 shrink-0" />
+              <span className="font-semibold text-center leading-tight">100% Confidential</span>
+            </div>
+            <div className="flex items-center justify-center gap-2 glass-card-light p-3 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs h-12">
+              <Phone className="w-4 h-4 text-gold-500 shrink-0" />
+              <span className="font-semibold text-center leading-tight">Audio/Video Call</span>
+            </div>
+            <div className="col-span-2 sm:col-span-1 flex items-center justify-center gap-2 glass-card-light p-3 rounded-xl border border-amber-500/20 bg-white/80 shadow-xs h-12">
+              <Tag className="w-4 h-4 text-gold-500 shrink-0" />
+              <span className="font-semibold text-center leading-tight">Fixed Fee: ₹1,500 INR</span>
             </div>
           </div>
 
@@ -148,10 +148,10 @@ export default function HomePage() {
               Certified Astrological Authority
             </Badge>
             <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mb-6">
-              Meet Your <span className="gold-gradient-text">Astrologer & Guide</span>
+              Meet <span className="gold-gradient-text">Mr. Deepak Mehta</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-              Welcome. I am a certified expert in traditional Vedic Astrology and Bhrigu Nandi Nadi techniques, dedicated to offering authentic, research-backed insights to help you navigate life&apos;s pivotal decisions.
+              Welcome. I am <strong>Mr. Deepak Mehta</strong>, a certified expert in traditional Vedic Astrology and Bhrigu Nandi Nadi techniques, dedicated to offering authentic, research-backed insights to help you navigate life&apos;s pivotal decisions.
             </p>
           </div>
 
@@ -360,7 +360,7 @@ export default function HomePage() {
                 <div className="p-8 rounded-2xl bg-white border border-amber-500/20 shadow-lg">
                   <Sparkles className="w-12 h-12 text-amber-600 mx-auto mb-4 animate-pulse" />
                   <h4 className="font-heading text-xl font-bold text-slate-900 mb-2">1-on-1 Direct Session</h4>
-                  <p className="text-xs text-slate-600 mb-4">Connect directly with certified experts via Call, WhatsApp, or Email.</p>
+                  <p className="text-xs text-slate-600 mb-4">Connect directly with certified expert Mr. Deepak Mehta via Call, WhatsApp, or Email.</p>
                   <div className="py-2.5 px-4 rounded-xl bg-amber-100 border border-amber-400/40 text-xs font-bold text-amber-900 inline-block">
                     Fee: ₹1,500 INR
                   </div>
@@ -435,7 +435,7 @@ export default function HomePage() {
               Ready to Book Your <span className="gold-gradient-text">1-on-1 Session?</span>
             </h2>
             <p className="text-slate-600 text-base max-w-2xl mx-auto mb-8">
-              Connect directly with certified Vedic & Bhrigu Nandi Nadi experts for personalized birth chart readings and remedies.
+              Connect directly with certified expert Mr. Deepak Mehta for personalized birth chart readings and remedies.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <Button size="lg" className="btn-gold-shimmer w-full sm:w-auto px-8 py-6 text-base font-bold shadow-lg" asChild>

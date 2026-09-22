@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { Phone, Mail, MessageCircle, Clock, Send, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, MessageCircle, Clock, Send, ShieldCheck, CheckCircle2, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -41,7 +41,7 @@ function ContactForm() {
           Schedule Your Consultation
         </h2>
         <p className="text-slate-600 text-xs sm:text-sm mb-6 leading-relaxed">
-          Fill in your basic details below to connect directly with our expert consultation team.
+          Fill in your basic details below to connect directly with certified expert <strong>Mr. Deepak Mehta</strong>.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 w-full min-w-0">
@@ -233,6 +233,39 @@ export default function ContactPage() {
                         <a href="mailto:secretsofastrology2dh@gmail.com" className="flex items-center gap-1.5">
                           <Mail className="w-3.5 h-3.5 text-amber-600" />
                           <span>Send Email</span>
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* YouTube Channel Card */}
+                <div className="glass-card-light rounded-2xl p-6 border border-amber-500/30">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-600 shrink-0">
+                      <Youtube className="w-6 h-6" />
+                    </div>
+                    <div className="flex-1">
+                      <span className="text-xs uppercase font-bold text-amber-700 tracking-wider block mb-1">
+                        YouTube Channel
+                      </span>
+                      <a
+                        href="https://www.youtube.com/@Nadi-Veda"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm sm:text-base font-extrabold text-slate-900 hover:text-red-600 transition-colors block break-all mb-3 opacity-100"
+                      >
+                        @Nadi-Veda
+                      </a>
+                      <Button size="sm" variant="outline" className="border-red-500/40 text-red-700 hover:bg-red-500/10 text-xs" asChild>
+                        <a
+                          href="https://www.youtube.com/@Nadi-Veda"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5"
+                        >
+                          <Youtube className="w-3.5 h-3.5 text-red-600" />
+                          <span>Subscribe / Watch Videos</span>
                         </a>
                       </Button>
                     </div>

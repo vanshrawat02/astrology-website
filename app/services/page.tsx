@@ -100,7 +100,7 @@ export default function ServicesPage() {
     {
       step: "02",
       title: "1-on-1 Expert Consultation",
-      desc: "Connect directly via Phone Call, Video Call, or Email with certified experts.",
+      desc: "Connect directly via Phone Call, Video Call, or Email with certified expert Mr. Deepak Mehta.",
     },
     {
       step: "03",
@@ -304,7 +304,7 @@ export default function ServicesPage() {
             Ready to Unlock <span className="gold-gradient-text">Cosmic Clarity?</span>
           </h2>
           <p className="text-slate-600 text-base max-w-2xl mx-auto mb-8">
-            Speak directly with certified experts today via Call, Email, or WhatsApp.
+            Speak directly with certified expert Mr. Deepak Mehta today via Call, Email, or WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="btn-gold-shimmer" asChild>

@@ -38,9 +38,9 @@ export default function WhyUsPage() {
       icon: Lock,
     },
     {
-      title: "Direct Expert Consultation",
+      title: "Direct Solo Expert Consultation",
       description:
-        "1-on-1 direct consultations available via Call, WhatsApp, or Email with certified experts.",
+        "1-on-1 direct consultations available via Call, WhatsApp, or Email with certified expert Mr. Deepak Mehta.",
       icon: Users,
     },
   ];
@@ -137,10 +137,10 @@ export default function WhyUsPage() {
               <div className="lg:col-span-8 space-y-6">
                 <Badge variant="default">Certified Astrological Authority</Badge>
                 <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900">
-                  Meet Your Astrologer & Guide
+                  Meet Mr. Deepak Mehta
                 </h2>
                 <p className="text-slate-600 leading-relaxed text-base">
-                  Welcome. I am a certified expert in traditional Vedic Astrology and Bhrigu Nandi Nadi techniques, dedicated to offering authentic, research-backed insights to help you navigate life&apos;s pivotal decisions.
+                  Welcome. I am <strong>Mr. Deepak Mehta</strong>, a certified expert in traditional Vedic Astrology and Bhrigu Nandi Nadi techniques, dedicated to offering authentic, research-backed insights to help you navigate life&apos;s pivotal decisions.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 text-xs font-semibold text-slate-800">
                   <div className="flex items-start gap-2.5 p-3 rounded-xl bg-amber-50/60 border border-amber-500/20">
@@ -191,12 +191,12 @@ export default function WhyUsPage() {
               <div className="lg:col-span-4 text-center">
                 <div className="w-44 h-44 rounded-full bg-gradient-to-tr from-gold-600 via-amber-500 to-amber-300 mx-auto p-1.5 shadow-xl">
                   <div className="w-full h-full rounded-full bg-amber-50 border-2 border-amber-300 flex items-center justify-center text-amber-900 font-heading font-extrabold text-4xl">
-                    VAN
+                    DM
                   </div>
                 </div>
-                <h4 className="font-bold text-slate-900 text-lg mt-6">Certified Expert</h4>
+                <h4 className="font-bold text-slate-900 text-lg mt-6">Mr. Deepak Mehta</h4>
                 <p className="text-xs text-amber-700 font-semibold uppercase tracking-wider mt-1">
-                  Vedic & Bhrigu Nandi Nadi Astrologer
+                  Certified Vedic & Bhrigu Nandi Nadi Expert
                 </p>
                 <div className="mt-3 inline-block px-3 py-1 rounded-full bg-amber-100 border border-amber-400/40 text-xs font-bold text-amber-900">
                   Fixed Fee: ₹1,500 INR

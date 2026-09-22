@@ -29,7 +29,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
           <div className="flex items-center gap-1.5 text-amber-900 font-semibold text-[10px] sm:text-xs min-w-0 flex-1">
             <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-600 animate-pulse shrink-0" />
-            <span className="truncate">Certified Experts in Vedic Astrology & Bhrigu Nandi Nadi</span>
+            <span className="truncate">Certified Expert: Mr. Deepak Mehta — Vedic Astrology & Bhrigu Nandi Nadi</span>
           </div>
           <div className="flex items-center justify-end gap-x-3 text-slate-800 shrink-0">
             <a
