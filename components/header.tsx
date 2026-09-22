@@ -30,7 +30,7 @@ export function Header() {
           {/* Desktop Left: Expert Title */}
           <div className="hidden sm:flex items-center gap-1.5 text-amber-900 font-semibold text-xs min-w-0 flex-1">
             <Sparkles className="w-3.5 h-3.5 text-amber-600 animate-pulse shrink-0" />
-            <span className="truncate">Certified Expert: Mr. Deepak Mehta — Vedic Astrology & Bhrigu Nandi Nadi</span>
+            <span className="truncate">Vedic Astrology & Bhrigu Nandi Nadi Consultation</span>
           </div>
 
           {/* Desktop Right / Mobile Full: Email & Phone Side by Side */}

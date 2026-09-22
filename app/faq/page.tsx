@@ -25,7 +25,7 @@ export default function FAQPage() {
     {
       question: "Can I get a consultation if I don't know my exact birth time?",
       answer:
-        "Yes! Through Prashna Kundali (Horary Astrology), certified expert Mr. Deepak Mehta casts a chart based on the precise time and location your query is asked. We also offer Birth Time Rectification (BTR) based on key life events.",
+        "Yes! Through Prashna Kundali (Horary Astrology), a chart is cast based on the precise time and location your query is asked. We also offer Birth Time Rectification (BTR) based on key life events.",
     },
     {
       question: "How are online Audio/Video consultations conducted?",
@@ -89,7 +89,7 @@ export default function FAQPage() {
               Still Have Questions?
             </h3>
             <p className="text-slate-600 text-sm max-w-md mx-auto mb-6">
-              Certified expert Mr. Deepak Mehta is available on WhatsApp to assist you with booking, queries, and consultation details.
+              We are available on WhatsApp to assist you with booking, queries, and consultation details.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button variant="emerald" asChild>

@@ -40,7 +40,7 @@ export default function WhyUsPage() {
     {
       title: "Direct Solo Expert Consultation",
       description:
-        "1-on-1 direct consultations available via Call, WhatsApp, or Email with certified expert Mr. Deepak Mehta.",
+        "1-on-1 direct personalized consultations available via Call, WhatsApp, or Email.",
       icon: Users,
     },
   ];
@@ -137,7 +137,7 @@ export default function WhyUsPage() {
               <div className="lg:col-span-8 space-y-6">
                 <Badge variant="default">Certified Astrological Authority</Badge>
                 <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900">
-                  Meet Mr. Deepak Mehta
+                  Meet Your <span className="gold-gradient-text">Astrologer</span>
                 </h2>
                 <p className="text-slate-600 leading-relaxed text-base">
                   Welcome. I am <strong>Deepak Mehta</strong>, a certified expert in traditional Vedic Astrology and Bhrigu Nandi Nadi techniques, dedicated to offering authentic, research-backed insights to help you navigate life&apos;s pivotal decisions.

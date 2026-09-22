@@ -31,17 +31,17 @@ export function Footer() {
               </div>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Empowering lives with authentic Vedic Astrology insights, Bhrigu Nandi Nadi readings, and effective practical remedies by certified expert <strong>Mr. Deepak Mehta</strong>.
+              Empowering lives with authentic Vedic Astrology insights, Bhrigu Nandi Nadi readings, and effective practical remedies.
             </p>
             <div className="pt-2">
-              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Connect With Us</span>
-              <div className="grid grid-cols-2 gap-2 max-w-[280px]">
+              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2.5">Connect With Us</span>
+              <div className="flex flex-col gap-2 max-w-[200px]">
                 {/* 1. WhatsApp */}
                 <a
                   href={`https://wa.me/919319506529?text=Hi%20Nadiveda,%20I%20would%20like%20to%20book%20a%20consultation.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-500/50 hover:bg-emerald-900/60 px-3.5 py-2 rounded-full transition-all shadow-sm"
+                  className="flex items-center gap-2.5 text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-500/50 hover:bg-emerald-900/60 px-4 py-2 rounded-full transition-all shadow-sm"
                   aria-label="WhatsApp"
                 >
                   <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -53,7 +53,7 @@ export function Footer() {
                   href={youtubeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xs font-bold text-red-400 bg-red-950/40 border border-red-500/50 hover:bg-red-900/60 px-3.5 py-2 rounded-full transition-all shadow-sm"
+                  className="flex items-center gap-2.5 text-xs font-bold text-red-400 bg-red-950/40 border border-red-500/50 hover:bg-red-900/60 px-4 py-2 rounded-full transition-all shadow-sm"
                   aria-label="YouTube Channel"
                 >
                   <Youtube className="w-4 h-4 text-red-400 shrink-0" />
@@ -65,7 +65,7 @@ export function Footer() {
                   href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xs font-bold text-pink-400 bg-pink-950/40 border border-pink-500/50 hover:bg-pink-900/60 px-3.5 py-2 rounded-full transition-all shadow-sm col-span-1"
+                  className="flex items-center gap-2.5 text-xs font-bold text-pink-400 bg-pink-950/40 border border-pink-500/50 hover:bg-pink-900/60 px-4 py-2 rounded-full transition-all shadow-sm"
                   aria-label="Instagram Profile"
                 >
                   <Instagram className="w-4 h-4 text-pink-400 shrink-0" />

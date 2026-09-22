@@ -75,7 +75,7 @@ function ContactForm() {
           Schedule Your Consultation
         </h2>
         <p className="text-slate-600 text-xs sm:text-sm mb-6 leading-relaxed">
-          Fill in your basic details below to connect directly with certified expert <strong>Mr. Deepak Mehta</strong>.
+          Fill in your details below to schedule your personalized 1-on-1 consultation.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 w-full min-w-0">
