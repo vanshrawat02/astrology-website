@@ -189,12 +189,14 @@ export default function WhyUsPage() {
               </div>
 
               <div className="lg:col-span-4 text-center">
-                <div className="w-44 h-44 rounded-full bg-gradient-to-tr from-gold-600 via-amber-500 to-amber-300 mx-auto p-1.5 shadow-xl">
-                  <div className="w-full h-full rounded-full bg-amber-50 border-2 border-amber-300 flex items-center justify-center text-amber-900 font-heading font-extrabold text-4xl">
-                    DM
-                  </div>
+                <div className="relative w-48 h-56 sm:w-56 sm:h-64 rounded-2xl overflow-hidden bg-gradient-to-tr from-gold-600 via-amber-500 to-amber-300 mx-auto p-1 shadow-xl">
+                  <img
+                    src="/deepak-mehta.jpg"
+                    alt="Acharya Deepak Mehta Astrologer"
+                    className="w-full h-full object-cover object-top rounded-xl"
+                  />
                 </div>
-                <h4 className="font-bold text-slate-900 text-lg mt-6">Mr. Deepak Mehta</h4>
+                <h4 className="font-bold text-slate-900 text-xl mt-4">Mr. Deepak Mehta</h4>
                 <p className="text-xs text-amber-700 font-semibold uppercase tracking-wider mt-1">
                   Certified Vedic & Bhrigu Nandi Nadi Expert
                 </p>
