@@ -62,8 +62,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/gemstones" className="hover:text-amber-400 transition-colors">
-                  Gemstones & Remedies
+                <Link href="/bhrigu-nandi-nadi-astrology" className="hover:text-amber-400 transition-colors">
+                  Bhrigu Nandi Nadi
+                </Link>
+              </li>
+              <li>
+                <Link href="/kundali-milan-astrology" className="hover:text-amber-400 transition-colors">
+                  Kundali Milan
+                </Link>
+              </li>
+              <li>
+                <Link href="/best-astrologer-in-delhi-ncr" className="hover:text-amber-400 transition-colors">
+                  Best Astrologer Delhi NCR
                 </Link>
               </li>
               <li>
@@ -91,25 +101,41 @@ export function Footer() {
               Specializations
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-300">
-              <li className="flex items-center gap-2">
-                <Heart className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span>Marriage & Relationship</span>
+              <li>
+                <Link href="/kundali-milan-astrology" className="flex items-center gap-2 hover:text-amber-400 transition-colors">
+                  <Heart className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span>Marriage & Kundali Milan</span>
+                </Link>
               </li>
-              <li className="flex items-center gap-2">
-                <Briefcase className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span>Career & Business Growth</span>
+              <li>
+                <Link href="/career-astrology-prediction" className="flex items-center gap-2 hover:text-amber-400 transition-colors">
+                  <Briefcase className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span>Career & Business Predictions</span>
+                </Link>
               </li>
-              <li className="flex items-center gap-2">
-                <Baby className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span>Child Birth & Family</span>
+              <li>
+                <Link href="/vedic-astrology-remedies" className="flex items-center gap-2 hover:text-amber-400 transition-colors">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span>Vedic Remedies & Gemstones</span>
+                </Link>
               </li>
-              <li className="flex items-center gap-2">
-                <Coins className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span>Finance & Wealth Guidance</span>
+              <li>
+                <Link href="/services/child-birth-family" className="flex items-center gap-2 hover:text-amber-400 transition-colors">
+                  <Baby className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span>Child Birth & Family</span>
+                </Link>
               </li>
-              <li className="flex items-center gap-2">
-                <Plane className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span>Foreign Travels & Relocation</span>
+              <li>
+                <Link href="/services/finance-wealth" className="flex items-center gap-2 hover:text-amber-400 transition-colors">
+                  <Coins className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span>Finance & Wealth Guidance</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/foreign-travel" className="flex items-center gap-2 hover:text-amber-400 transition-colors">
+                  <Plane className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span>Foreign Travel & Settlement</span>
+                </Link>
               </li>
             </ul>
           </div>

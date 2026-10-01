@@ -10,6 +10,7 @@ const cinzel = Cinzel({
   weight: ["500", "600", "700", "800", "900"],
   variable: "--font-cinzel",
   display: "swap",
+  fallback: ["Georgia", "serif"],
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -17,6 +18,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-jakarta",
   display: "swap",
+  fallback: ["system-ui", "sans-serif"],
 });
 
 export const metadata: Metadata = {
